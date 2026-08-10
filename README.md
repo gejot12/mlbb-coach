@@ -34,15 +34,16 @@ Halaman Hero Guide, Rotasi Role, dan Draft Simulator berjalan dari data statis d
 Halaman Match tetap jalan dengan data manual di `supabase/seed.sql` tanpa langkah ini. Untuk
 sinkronisasi otomatis dari Liquipedia:
 
-1. Ajukan akses lewat contact form di [liquipedia.net](https://liquipedia.net) (bukan
-   self-service) — akses gratis dibatasi untuk proyek edukasi/non-komersial yang open-source,
-   dan sering diberikan untuk jangka waktu terbatas. Jelaskan bahwa proyek ini bersifat
-   edukasi komunitas.
+1. Ajukan akses lewat channel **#api-help** di [Discord Liquipedia](https://discord.com/invite/liquipedia)
+   atau form di [liquipedia.net/api](https://liquipedia.net/api) — akses gratis dibatasi untuk
+   proyek edukasi/non-komersial yang open-source, dan sering diberikan untuk jangka waktu
+   terbatas. Jelaskan bahwa proyek ini bersifat edukasi komunitas.
 2. Setelah disetujui, isi `LIQUIPEDIA_API_KEY` dan `LIQUIPEDIA_USER_AGENT` di `.env.local`.
-3. **Konfirmasi ulang nama tabel/field Cargo** di `src/lib/liquipedia/client.ts` —
-   `CARGO_MATCH_FIELDS` di sana masih perkiraan (dokumentasi resmi tidak bisa diakses otomatis
-   saat kode ini ditulis), sesuaikan dengan dokumentasi asli yang muncul di LiquipediaDB
-   Dashboard.
+3. **Implementasikan `queryMatches` di `src/lib/liquipedia/client.ts` dari nol** sesuai
+   dokumentasi asli yang diberikan setelah approval. Catatan penting: LPDB (LiquipediaDB) itu
+   sistem proprietary Liquipedia sendiri, **bukan** MediaWiki Cargo API generik (`action=cargoquery`)
+   — jangan asumsikan bentuknya sebelum baca dokumentasi resminya. `queryMatches` saat ini
+   sengaja berupa stub yang throw error, bukan implementasi tebakan.
 4. Set `CRON_SECRET` di environment variables Vercel (bukan cuma `.env.local`) — Vercel Cron
    otomatis mengirim header `Authorization: Bearer <CRON_SECRET>` ke `/api/sync/liquipedia`
    sesuai jadwal di `vercel.json`.

@@ -1,4 +1,4 @@
-import { queryMatches, type RawCargoMatch } from "./client";
+import { queryMatches, type RawLpdbMatch } from "./client";
 import { createSupabaseServiceClient } from "@/lib/supabase/server";
 
 // Liquipedia page prefixes per league — confirm these against the real page names once
@@ -11,11 +11,11 @@ const LEAGUE_TOURNAMENT_PAGES: Record<string, string> = {
   "m-series": "MSC/2026",
 };
 
-function toExternalId(match: RawCargoMatch): string {
+function toExternalId(match: RawLpdbMatch): string {
   return `${match.pagename}::${match.team1}::${match.team2}::${match.date}`;
 }
 
-function mapStatus(match: RawCargoMatch): "scheduled" | "completed" {
+function mapStatus(match: RawLpdbMatch): "scheduled" | "completed" {
   return match.winner ? "completed" : "scheduled";
 }
 
@@ -43,7 +43,10 @@ export async function syncLeagueMatches(leagueSlug: string): Promise<SyncResult>
     return { league: leagueSlug, fetched: 0, upserted: 0, error: leagueError?.message ?? "League not found" };
   }
 
-  const rawMatches = await queryMatches(`Match.tournament="${tournamentPage}"`);
+  // `queryMatches` is currently a stub (throws) — see client.ts. Once the real LPDB
+  // request shape is known, this call's argument(s) will need to match that shape;
+  // `tournamentPage` is kept here as the thing being queried for, not literal query syntax.
+  const rawMatches = await queryMatches(tournamentPage);
 
   const rows = rawMatches.map((m) => ({
     league_id: league.id,
