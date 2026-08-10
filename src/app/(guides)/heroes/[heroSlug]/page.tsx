@@ -5,6 +5,7 @@ import { HEROES, getHero } from "@/data/heroes";
 import { getItem } from "@/data/items";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
+import { HeroAvatar } from "@/components/ui/hero-avatar";
 
 export function generateStaticParams() {
   return HEROES.map((hero) => ({ heroSlug: hero.slug }));
@@ -62,9 +63,14 @@ export default async function HeroDetailPage({
         ← Semua Hero
       </Link>
 
-      <div className="mt-3 flex flex-wrap items-center gap-3">
-        <h1 className="text-3xl font-bold tracking-tight">{hero.name}</h1>
-        <Badge tone="accent">{hero.difficulty}</Badge>
+      <div className="mt-3 flex flex-wrap items-center gap-4">
+        <HeroAvatar slug={hero.slug} name={hero.name} size={72} className="shrink-0 rounded-2xl" />
+        <div>
+          <div className="flex flex-wrap items-center gap-3">
+            <h1 className="text-3xl font-bold tracking-tight">{hero.name}</h1>
+            <Badge tone="accent">{hero.difficulty}</Badge>
+          </div>
+        </div>
       </div>
       <div className="mt-2 flex flex-wrap gap-1.5">
         {hero.roles.map((role) => (

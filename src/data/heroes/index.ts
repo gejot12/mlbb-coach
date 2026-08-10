@@ -24,6 +24,31 @@ import { hero as beatrix } from './beatrix';
 import { hero as melissa } from './melissa';
 import { hero as mathilda } from './mathilda';
 import { hero as diggie } from './diggie';
+import { hero as baxia } from './baxia';
+import { hero as fredrinn } from './fredrinn';
+import { hero as akai } from './akai';
+import { hero as esmeralda } from './esmeralda';
+import { hero as nolan } from './nolan';
+import { hero as aulus } from './aulus';
+import { hero as minsitthar } from './minsitthar';
+import { hero as argus } from './argus';
+import { hero as zhuxin } from './zhuxin';
+import { hero as atlas } from './atlas';
+import { hero as gloo } from './gloo';
+import { hero as rafaela } from './rafaela';
+import { hero as masha } from './masha';
+import { hero as floryn } from './floryn';
+import { hero as minotaur } from './minotaur';
+import { hero as popolAndKupa } from './popol-and-kupa';
+import { hero as wanwan } from './wanwan';
+import { hero as claude } from './claude';
+import { hero as granger } from './granger';
+import { hero as valentina } from './valentina';
+import { hero as pharsa } from './pharsa';
+import { hero as selena } from './selena';
+import { hero as saber } from './saber';
+import { hero as zilong } from './zilong';
+import { hero as miya } from './miya';
 
 export const HEROES: Hero[] = [
   tigreal,
@@ -50,6 +75,31 @@ export const HEROES: Hero[] = [
   melissa,
   mathilda,
   diggie,
+  baxia,
+  fredrinn,
+  akai,
+  esmeralda,
+  nolan,
+  aulus,
+  minsitthar,
+  argus,
+  zhuxin,
+  atlas,
+  gloo,
+  rafaela,
+  masha,
+  floryn,
+  minotaur,
+  popolAndKupa,
+  wanwan,
+  claude,
+  granger,
+  valentina,
+  pharsa,
+  selena,
+  saber,
+  zilong,
+  miya,
 ];
 
 const HEROES_BY_SLUG = new Map(HEROES.map((h) => [h.slug, h]));

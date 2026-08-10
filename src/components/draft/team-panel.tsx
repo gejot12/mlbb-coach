@@ -1,12 +1,13 @@
 import { getHero } from "@/data/heroes";
 import type { DraftTeam } from "@/data/draft-format";
+import { HeroAvatar } from "@/components/ui/hero-avatar";
 
 function Slot({ slug, kind }: { slug?: string; kind: "ban" | "pick" }) {
   const hero = slug ? getHero(slug) : undefined;
   const isBan = kind === "ban";
   return (
     <div
-      className={`flex h-10 items-center rounded-md border px-2 text-sm ${
+      className={`flex h-10 items-center gap-2 rounded-md border px-2 text-sm ${
         hero
           ? isBan
             ? "border-rose-500/30 bg-rose-500/10 text-rose-600 dark:text-rose-400"
@@ -14,6 +15,9 @@ function Slot({ slug, kind }: { slug?: string; kind: "ban" | "pick" }) {
           : "border-dashed border-black/15 text-foreground/30 dark:border-white/15"
       }`}
     >
+      {hero && (
+        <HeroAvatar slug={hero.slug} name={hero.name} size={22} className={`rounded ${isBan ? "grayscale" : ""}`} />
+      )}
       {hero ? (isBan ? `🚫 ${hero.name}` : hero.name) : isBan ? "Ban…" : "Pick…"}
     </div>
   );

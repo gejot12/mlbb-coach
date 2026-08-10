@@ -19,27 +19,27 @@ insert into patch_notes (version, release_date, title, summary, source) values
   );
 
 insert into patch_note_changes (patch_note_id, change_type, subject_name, subject_slug, description, sort_order)
-select id, 'hero_nerf', 'Baxia', null, 'Kecepatan jungling dan damage clear dikurangi.', 1 from patch_notes where version = '2.1.90'
+select id, 'hero_nerf', 'Baxia', 'baxia', 'Kecepatan jungling dan damage clear dikurangi.', 1 from patch_notes where version = '2.1.90'
 union all
-select id, 'hero_nerf', 'Fredrinn', null, 'Kecepatan jungling dan damage clear dikurangi.', 2 from patch_notes where version = '2.1.90'
+select id, 'hero_nerf', 'Fredrinn', 'fredrinn', 'Kecepatan jungling dan damage clear dikurangi.', 2 from patch_notes where version = '2.1.90'
 union all
-select id, 'hero_nerf', 'Akai', null, 'Kecepatan jungling dan damage clear dikurangi.', 3 from patch_notes where version = '2.1.90'
+select id, 'hero_nerf', 'Akai', 'akai', 'Kecepatan jungling dan damage clear dikurangi.', 3 from patch_notes where version = '2.1.90'
 union all
-select id, 'hero_buff', 'Esmeralda', null, 'Buff untuk menaikkan viability exp lane/jungle.', 4 from patch_notes where version = '2.1.90'
+select id, 'hero_buff', 'Esmeralda', 'esmeralda', 'Buff untuk menaikkan viability exp lane/jungle.', 4 from patch_notes where version = '2.1.90'
 union all
-select id, 'hero_buff', 'Nolan', null, 'Buff untuk menaikkan viability jungle.', 5 from patch_notes where version = '2.1.90'
+select id, 'hero_buff', 'Nolan', 'nolan', 'Buff untuk menaikkan viability jungle.', 5 from patch_notes where version = '2.1.90'
 union all
-select id, 'hero_buff', 'Aulus', null, 'Buff untuk menaikkan viability exp lane.', 6 from patch_notes where version = '2.1.90'
+select id, 'hero_buff', 'Aulus', 'aulus', 'Buff untuk menaikkan viability exp lane.', 6 from patch_notes where version = '2.1.90'
 union all
-select id, 'hero_buff', 'Minsitthar', null, 'Buff untuk menaikkan viability jungle/roam.', 7 from patch_notes where version = '2.1.90'
+select id, 'hero_buff', 'Minsitthar', 'minsitthar', 'Buff untuk menaikkan viability jungle/roam.', 7 from patch_notes where version = '2.1.90'
 union all
-select id, 'hero_buff', 'Argus', null, 'Buff untuk menaikkan viability jungle/exp lane.', 8 from patch_notes where version = '2.1.90'
+select id, 'hero_buff', 'Argus', 'argus', 'Buff untuk menaikkan viability jungle/exp lane.', 8 from patch_notes where version = '2.1.90'
 union all
-select id, 'hero_adjust', 'Zhuxin', null, 'Jarak cast Skill 2 dikurangi.', 9 from patch_notes where version = '2.1.90'
+select id, 'hero_adjust', 'Zhuxin', 'zhuxin', 'Jarak cast Skill 2 dikurangi.', 9 from patch_notes where version = '2.1.90'
 union all
 select id, 'hero_buff', 'Melissa', 'melissa', 'Buff Mythical Honor.', 10 from patch_notes where version = '2.1.90'
 union all
-select id, 'system_change', 'Atlas', null, 'Fix cooldown Skill 1 yang tidak sesuai deskripsi.', 11 from patch_notes where version = '2.1.90'
+select id, 'system_change', 'Atlas', 'atlas', 'Fix cooldown Skill 1 yang tidak sesuai deskripsi.', 11 from patch_notes where version = '2.1.90'
 union all
 select id, 'system_change', 'Jungle Gold', null, 'Gold pasif early-game dari jungle dinaikkan.', 12 from patch_notes where version = '2.1.90';
 
