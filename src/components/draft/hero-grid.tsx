@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { HEROES, ALL_ROLES } from "@/data/heroes";
+import { getMetaPriority } from "@/data/meta-priority";
 import type { Role } from "@/lib/types/hero";
 import { Badge } from "@/components/ui/badge";
 import { HeroAvatar } from "@/components/ui/hero-avatar";
@@ -82,7 +83,10 @@ export function HeroGrid({
                     : "border-black/10 hover:border-amber-500/40 dark:border-white/10"
               }`}
             >
-              <HeroAvatar slug={hero.slug} name={hero.name} size={36} className="rounded-md" />
+              <div className="flex w-full items-start justify-between">
+                <HeroAvatar slug={hero.slug} name={hero.name} size={36} className="rounded-md" />
+                {getMetaPriority(hero.slug) && <span title="Prioritas meta MSC 2026">🔥</span>}
+              </div>
               <span className="text-sm font-medium">{hero.name}</span>
               <span className="flex flex-wrap gap-1">
                 {hero.roles.map((r) => (

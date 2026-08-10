@@ -25,12 +25,14 @@ function Slot({ slug, kind }: { slug?: string; kind: "ban" | "pick" }) {
 
 export function TeamPanel({
   team,
+  label,
   bans,
   picks,
   activeTeam,
   align = "left",
 }: {
   team: DraftTeam;
+  label?: string;
   bans: string[];
   picks: string[];
   activeTeam?: DraftTeam;
@@ -45,11 +47,11 @@ export function TeamPanel({
   return (
     <div
       className={`rounded-xl border p-4 ${
-        isActive ? "border-amber-500/60 bg-amber-500/5" : "border-black/10 dark:border-white/10"
+        isActive ? "border-accent-amber/60 bg-accent-amber/5" : "border-border-subtle"
       } ${align === "right" ? "text-right" : ""}`}
     >
       <h2 className="font-semibold">
-        Tim {team} {isActive && <span className="text-amber-500">(giliran)</span>}
+        {label ?? `Tim ${team}`} {isActive && <span className="text-accent-amber">(giliran)</span>}
       </h2>
       <div className="mt-3">
         <p className="text-xs font-medium uppercase tracking-wide text-foreground/50">Ban</p>

@@ -1,4 +1,5 @@
 import { getHero } from '@/data/heroes';
+import { getMetaPriority } from '@/data/meta-priority';
 import type { DraftTeam } from '@/data/draft-format';
 import type { DraftState } from './engine';
 
@@ -8,11 +9,13 @@ export interface Suggestion {
   reasons: string[];
 }
 
-const WEIGHTS = { counter: 2, synergy: 1, counteredBy: -2 } as const;
+const WEIGHTS = { counter: 2, synergy: 1, counteredBy: -2, metaPremier: 1, metaHigh: 0.5 } as const;
 
 /**
  * Scores available heroes for `team` based on hero data already authored for the guide
- * pages (strongAgainst/weakAgainst/synergizesWith) — no separate matchup matrix needed.
+ * pages (strongAgainst/weakAgainst/synergizesWith), plus a small bonus for heroes flagged
+ * as high pick/ban priority in the current competitive meta (see data/meta-priority.ts) —
+ * this lets suggestions surface something meaningful even before any picks exist yet.
  */
 export function getSuggestions(
   state: DraftState,
@@ -50,6 +53,12 @@ export function getSuggestions(
         score += WEIGHTS.synergy;
         reasons.push(`Sinergi dengan ${ally.name}`);
       }
+    }
+
+    const meta = getMetaPriority(slug);
+    if (meta) {
+      score += meta.tier === 'premier' ? WEIGHTS.metaPremier : WEIGHTS.metaHigh;
+      reasons.push(meta.tier === 'premier' ? 'Prioritas ban/pick MSC 2026' : 'Meta kuat MSC 2026');
     }
 
     return { heroSlug: slug, score, reasons };
