@@ -7,6 +7,9 @@ import { motion } from "motion/react";
 const NAV_LINKS = [
   { href: "/heroes", label: "Hero Guide" },
   { href: "/roles", label: "Rotasi Role" },
+  { href: "/emblems", label: "Emblem" },
+  { href: "/spells", label: "Spell" },
+  { href: "/items", label: "Item" },
   { href: "/draft-simulator", label: "Draft Simulator" },
   { href: "/patch-notes", label: "Patch Notes" },
   { href: "/matches", label: "Match" },
