@@ -1,10 +1,10 @@
 import type { ReactNode } from 'react';
 
 const TONE_CLASSES = {
-  neutral: 'bg-black/5 text-foreground/80 dark:bg-white/10',
-  good: 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400',
-  bad: 'bg-rose-500/15 text-rose-600 dark:text-rose-400',
-  accent: 'bg-amber-500/15 text-amber-600 dark:text-amber-400',
+  neutral: 'bg-white/10 text-foreground/80',
+  good: 'bg-emerald-500/15 text-emerald-400',
+  bad: 'bg-rose-500/15 text-rose-400',
+  accent: 'bg-accent-amber/15 text-accent-amber',
 } as const;
 
 export function Badge({
