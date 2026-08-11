@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { HEROES, ALL_ROLES } from "@/data/heroes";
 import { getMetaPriority } from "@/data/meta-priority";
+import { getHeroReleaseYear } from "@/data/hero-release-years";
 import type { Role } from "@/lib/types/hero";
 import { Badge } from "@/components/ui/badge";
 import { HeroAvatar } from "@/components/ui/hero-avatar";
@@ -21,14 +22,31 @@ export function HeroGrid({
   const [search, setSearch] = useState("");
   const [roleFilter, setRoleFilter] = useState<Role | "all">("all");
   const suggestedSet = useMemo(() => new Set(suggestedSlugs), [suggestedSlugs]);
+  const suggestedRank = useMemo(() => {
+    const rank = new Map<string, number>();
+    suggestedSlugs.forEach((slug, i) => rank.set(slug, i));
+    return rank;
+  }, [suggestedSlugs]);
 
   const heroes = useMemo(() => {
-    return HEROES.filter((hero) => {
+    const filtered = HEROES.filter((hero) => {
       if (roleFilter !== "all" && !hero.roles.includes(roleFilter)) return false;
       if (search && !hero.name.toLowerCase().includes(search.toLowerCase())) return false;
       return true;
     });
-  }, [roleFilter, search]);
+
+    // Rekomendasi ban/pick paling atas (sesuai urutan skor/prioritas), sisanya hero terbaru dulu.
+    return [...filtered].sort((a, b) => {
+      const rankA = suggestedRank.get(a.slug);
+      const rankB = suggestedRank.get(b.slug);
+      if (rankA !== undefined || rankB !== undefined) {
+        if (rankA === undefined) return 1;
+        if (rankB === undefined) return -1;
+        return rankA - rankB;
+      }
+      return getHeroReleaseYear(b.slug) - getHeroReleaseYear(a.slug);
+    });
+  }, [roleFilter, search, suggestedRank]);
 
   return (
     <div>

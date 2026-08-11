@@ -12,6 +12,7 @@ import { getSuggestions } from "@/lib/draft/suggestions";
 import { getRecommendedEmblem } from "@/lib/draft/emblem-suggestion";
 import { MLBB_DRAFT_SEQUENCE, type DraftTeam } from "@/data/draft-format";
 import { getHero } from "@/data/heroes";
+import { MSC_2026_META_PRIORITY } from "@/data/meta-priority";
 import { TeamPanel } from "./team-panel";
 import { HeroGrid } from "./hero-grid";
 import { SuggestionPanel } from "./suggestion-panel";
@@ -56,6 +57,21 @@ export function DraftSimulator() {
     if (!currentStep || currentStep.action !== "pick") return [];
     return getSuggestions(state, currentStep.team, availableSlugs);
   }, [state, currentStep, availableSlugs]);
+
+  // Ban phase has no counter-pick logic to lean on yet (no ally hero picked), so during
+  // bans we surface heroes worth banning based on current competitive meta priority instead.
+  const banRecommendations = useMemo(() => {
+    if (!currentStep || currentStep.action !== "ban") return [];
+    const availableSet = new Set(availableSlugs);
+    return MSC_2026_META_PRIORITY.filter((e) => availableSet.has(e.slug))
+      .sort((a, b) => (a.tier === b.tier ? 0 : a.tier === "premier" ? -1 : 1))
+      .map((e) => e.slug);
+  }, [currentStep, availableSlugs]);
+
+  const priorityHeroSlugs = useMemo(() => {
+    if (currentStep?.action === "ban") return banRecommendations;
+    return suggestions.map((s) => s.heroSlug);
+  }, [currentStep, banRecommendations, suggestions]);
 
   const emblemSuggestion = useMemo(() => {
     if (!currentStep || currentStep.action !== "pick") return null;
@@ -129,7 +145,7 @@ export function DraftSimulator() {
           <h2 className="mb-2 font-semibold">{complete ? "Draft Selesai" : "Pilih Hero"}</h2>
           <HeroGrid
             availableSlugs={new Set(availableSlugs)}
-            suggestedSlugs={suggestions.map((s) => s.heroSlug)}
+            suggestedSlugs={priorityHeroSlugs}
             disabled={complete}
             onSelect={(slug) => dispatch({ type: "SELECT", heroSlug: slug })}
           />
