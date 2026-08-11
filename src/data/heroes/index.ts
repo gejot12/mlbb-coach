@@ -99,6 +99,38 @@ import { hero as carmilla } from './carmilla';
 import { hero as yve } from './yve';
 import { hero as phoveus } from './phoveus';
 import { hero as edith } from './edith';
+import { hero as aldous } from './aldous';
+import { hero as alpha } from './alpha';
+import { hero as badang } from './badang';
+import { hero as bane } from './bane';
+import { hero as barats } from './barats';
+import { hero as hilda } from './hilda';
+import { hero as lapuLapu } from './lapu-lapu';
+import { hero as lukas } from './lukas';
+import { hero as silvanna } from './silvanna';
+import { hero as xBorg } from './x-borg';
+import { hero as chip } from './chip';
+import { hero as gatotkaca } from './gatotkaca';
+import { hero as lolita } from './lolita';
+import { hero as aurora } from './aurora';
+import { hero as cyclops } from './cyclops';
+import { hero as gord } from './gord';
+import { hero as kimmy } from './kimmy';
+import { hero as luoYi } from './luo-yi';
+import { hero as valir } from './valir';
+import { hero as xavier } from './xavier';
+import { hero as zhask } from './zhask';
+import { hero as brody } from './brody';
+import { hero as clint } from './clint';
+import { hero as hanabi } from './hanabi';
+import { hero as natan } from './natan';
+import { hero as yiSunShin } from './yi-sun-shin';
+import { hero as aamon } from './aamon';
+import { hero as hanzo } from './hanzo';
+import { hero as joy } from './joy';
+import { hero as julian } from './julian';
+import { hero as suyou } from './suyou';
+import { hero as kaja } from './kaja';
 
 export const HEROES: Hero[] = [
   tigreal,
@@ -200,6 +232,38 @@ export const HEROES: Hero[] = [
   yve,
   phoveus,
   edith,
+  aldous,
+  alpha,
+  badang,
+  bane,
+  barats,
+  hilda,
+  lapuLapu,
+  lukas,
+  silvanna,
+  xBorg,
+  chip,
+  gatotkaca,
+  lolita,
+  aurora,
+  cyclops,
+  gord,
+  kimmy,
+  luoYi,
+  valir,
+  xavier,
+  zhask,
+  brody,
+  clint,
+  hanabi,
+  natan,
+  yiSunShin,
+  aamon,
+  hanzo,
+  joy,
+  julian,
+  suyou,
+  kaja,
 ];
 
 const HEROES_BY_SLUG = new Map(HEROES.map((h) => [h.slug, h]));
