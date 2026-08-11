@@ -1,4 +1,4 @@
-import { queryMatches, type RawLpdbMatch } from "./client";
+import { queryMatches, type LpdbMatch } from "./client";
 import { createSupabaseServiceClient } from "@/lib/supabase/server";
 
 // Liquipedia page prefixes per league — confirm these against the real page names once
@@ -11,12 +11,36 @@ const LEAGUE_TOURNAMENT_PAGES: Record<string, string> = {
   "m-series": "MSC/2026",
 };
 
-function toExternalId(match: RawLpdbMatch): string {
-  return `${match.pagename}::${match.team1}::${match.team2}::${match.date}`;
+function teamName(match: LpdbMatch, index: 0 | 1): string {
+  return match.match2opponents[index]?.name ?? "TBD";
 }
 
-function mapStatus(match: RawLpdbMatch): "scheduled" | "completed" {
-  return match.winner ? "completed" : "scheduled";
+function teamScore(match: LpdbMatch, index: 0 | 1): number | null {
+  const score = match.match2opponents[index]?.score;
+  return typeof score === "number" ? score : null;
+}
+
+function winnerName(match: LpdbMatch): string | null {
+  if (match.winner === "1") return teamName(match, 0);
+  if (match.winner === "2") return teamName(match, 1);
+  return null;
+}
+
+function mapStatus(match: LpdbMatch): "scheduled" | "completed" {
+  return match.finished === 1 ? "completed" : "scheduled";
+}
+
+/** Liquipedia dates come as "YYYY-MM-DD HH:MM:SS" with no confirmed timezone — treated as
+ *  UTC until verified against real docs/data. */
+function toIsoTimestamp(date: string): string {
+  return `${date.replace(" ", "T")}Z`;
+}
+
+/** No unique match ID field was visible in the example response — this composite key is a
+ *  best-effort external_id. Prefer a real ID field (e.g. match2id) if the full schema has
+ *  one, since a composite key can collide if two matches share tournament+date+teams. */
+function toExternalId(match: LpdbMatch): string {
+  return `${match.tournament}::${teamName(match, 0)}::${teamName(match, 1)}::${match.date}`;
 }
 
 export interface SyncResult {
@@ -43,22 +67,21 @@ export async function syncLeagueMatches(leagueSlug: string): Promise<SyncResult>
     return { league: leagueSlug, fetched: 0, upserted: 0, error: leagueError?.message ?? "League not found" };
   }
 
-  // `queryMatches` is currently a stub (throws) — see client.ts. Once the real LPDB
-  // request shape is known, this call's argument(s) will need to match that shape;
-  // `tournamentPage` is kept here as the thing being queried for, not literal query syntax.
   const rawMatches = await queryMatches(tournamentPage);
 
   const rows = rawMatches.map((m) => ({
     league_id: league.id,
-    stage: m.tournament,
-    scheduled_at: m.date,
-    team_a: m.team1,
-    team_b: m.team2,
+    stage: m.match2bracketdata?.header || m.tournament,
+    scheduled_at: toIsoTimestamp(m.date),
+    team_a: teamName(m, 0),
+    team_b: teamName(m, 1),
     status: mapStatus(m),
-    winner: m.winner,
-    best_of: m.bestof ? Number(m.bestof) : null,
+    score_a: teamScore(m, 0),
+    score_b: teamScore(m, 1),
+    winner: winnerName(m),
+    best_of: m.bestof ?? null,
     source: "scraper" as const,
-    source_url: `https://liquipedia.net/mobilelegends/${m.pagename}`,
+    source_url: null as string | null,
     external_id: toExternalId(m),
   }));
 
