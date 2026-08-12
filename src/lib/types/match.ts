@@ -20,6 +20,7 @@ export interface Match {
   winner: string | null;
   best_of: number | null;
   source_url: string | null;
+  vod_url: string | null;
   source: 'manual' | 'scraper';
   external_id: string | null;
 }

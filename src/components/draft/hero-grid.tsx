@@ -103,7 +103,7 @@ export function HeroGrid({
             >
               <div className="flex w-full items-start justify-between">
                 <HeroAvatar slug={hero.slug} name={hero.name} size={36} className="rounded-md" />
-                {getMetaPriority(hero.slug) && <span title="Prioritas meta MSC 2026">🔥</span>}
+                {getMetaPriority(hero.slug) && <span title="Prioritas meta kompetitif terkini">🔥</span>}
               </div>
               <span className="text-sm font-medium">{hero.name}</span>
               <span className="flex flex-wrap gap-1">

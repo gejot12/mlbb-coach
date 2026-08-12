@@ -18,7 +18,7 @@ import {
   type DraftTeam,
 } from "@/data/draft-format";
 import { getHero } from "@/data/heroes";
-import { MSC_2026_META_PRIORITY } from "@/data/meta-priority";
+import { COMPETITIVE_META_PRIORITY } from "@/data/meta-priority";
 import { TeamPanel } from "./team-panel";
 import { HeroGrid } from "./hero-grid";
 import { SuggestionPanel } from "./suggestion-panel";
@@ -106,7 +106,7 @@ export function DraftSimulator() {
   const banRecommendations = useMemo(() => {
     if (!currentStep || currentStep.action !== "ban") return [];
     const availableSet = new Set(availableSlugs);
-    return MSC_2026_META_PRIORITY.filter((e) => availableSet.has(e.slug))
+    return COMPETITIVE_META_PRIORITY.filter((e) => availableSet.has(e.slug))
       .sort((a, b) => (a.tier === b.tier ? 0 : a.tier === "premier" ? -1 : 1))
       .map((e) => e.slug);
   }, [currentStep, availableSlugs]);
@@ -138,6 +138,7 @@ export function DraftSimulator() {
           <p className="text-xs font-medium uppercase tracking-wide text-foreground-muted/70">
             {DRAFT_ROOM_INFO[room].label}
           </p>
+          <p className="text-xs text-foreground-muted">{DRAFT_ROOM_INFO[room].description}</p>
           {complete ? (
             <p className="font-semibold text-emerald-400">Draft selesai!</p>
           ) : (

@@ -58,7 +58,7 @@ export function getSuggestions(
     const meta = getMetaPriority(slug);
     if (meta) {
       score += meta.tier === 'premier' ? WEIGHTS.metaPremier : WEIGHTS.metaHigh;
-      reasons.push(meta.tier === 'premier' ? 'Prioritas ban/pick MSC 2026' : 'Meta kuat MSC 2026');
+      reasons.push(meta.tier === 'premier' ? 'Prioritas ban/pick meta kompetitif' : 'Meta kuat kompetitif');
     }
 
     return { heroSlug: slug, score, reasons };

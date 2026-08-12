@@ -63,6 +63,7 @@ function MatchRow({ match }: { match: MatchWithLeague }) {
             <span>{match.leagues.name}</span>
             {match.stage && <span>· {match.stage}</span>}
             <span>· {dateLabel} WIB</span>
+            {match.vod_url && <span className="text-rose-500">▶ VOD</span>}
           </div>
           <Badge tone={STATUS_TONE[match.status]}>{match.status}</Badge>
         </div>
