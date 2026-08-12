@@ -30,6 +30,7 @@ export function TeamPanel({
   picks,
   activeTeam,
   align = "left",
+  banSlots = 5,
 }: {
   team: DraftTeam;
   label?: string;
@@ -37,10 +38,11 @@ export function TeamPanel({
   picks: string[];
   activeTeam?: DraftTeam;
   align?: "left" | "right";
+  banSlots?: number;
 }) {
   const isActive = activeTeam === team;
   const slots = (arr: string[], kind: "ban" | "pick") =>
-    Array.from({ length: kind === "ban" ? 5 : 5 }).map((_, i) => (
+    Array.from({ length: kind === "ban" ? banSlots : 5 }).map((_, i) => (
       <Slot key={i} slug={arr[i]} kind={kind} />
     ));
 

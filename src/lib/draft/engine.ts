@@ -9,6 +9,7 @@ export interface DraftHistoryEntry {
 }
 
 export interface DraftState {
+  sequence: DraftStep[];
   stepIndex: number;
   bansA: string[];
   bansB: string[];
@@ -17,16 +18,16 @@ export interface DraftState {
   history: DraftHistoryEntry[];
 }
 
-export function createInitialDraftState(): DraftState {
-  return { stepIndex: 0, bansA: [], bansB: [], picksA: [], picksB: [], history: [] };
+export function createInitialDraftState(sequence: DraftStep[] = MLBB_DRAFT_SEQUENCE): DraftState {
+  return { sequence, stepIndex: 0, bansA: [], bansB: [], picksA: [], picksB: [], history: [] };
 }
 
 export function getCurrentStep(state: DraftState): DraftStep | undefined {
-  return MLBB_DRAFT_SEQUENCE[state.stepIndex];
+  return state.sequence[state.stepIndex];
 }
 
 export function isDraftComplete(state: DraftState): boolean {
-  return state.stepIndex >= MLBB_DRAFT_SEQUENCE.length;
+  return state.stepIndex >= state.sequence.length;
 }
 
 export function getUnavailableHeroSlugs(state: DraftState): Set<string> {
@@ -38,12 +39,14 @@ export function getAvailableHeroSlugs(state: DraftState): string[] {
   return HEROES.map((h) => h.slug).filter((slug) => !unavailable.has(slug));
 }
 
-export type DraftAction = { type: 'SELECT'; heroSlug: string } | { type: 'RESET' };
+export type DraftAction =
+  | { type: 'SELECT'; heroSlug: string }
+  | { type: 'RESET'; sequence?: DraftStep[] };
 
 export function draftReducer(state: DraftState, action: DraftAction): DraftState {
   switch (action.type) {
     case 'RESET':
-      return createInitialDraftState();
+      return createInitialDraftState(action.sequence ?? state.sequence);
     case 'SELECT': {
       const step = getCurrentStep(state);
       if (!step) return state;

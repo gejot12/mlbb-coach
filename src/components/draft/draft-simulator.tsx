@@ -10,20 +10,57 @@ import {
 } from "@/lib/draft/engine";
 import { getSuggestions } from "@/lib/draft/suggestions";
 import { getRecommendedEmblem } from "@/lib/draft/emblem-suggestion";
-import { MLBB_DRAFT_SEQUENCE, type DraftTeam } from "@/data/draft-format";
+import {
+  ALL_DRAFT_ROOMS,
+  DRAFT_ROOM_INFO,
+  DRAFT_SEQUENCES,
+  type DraftRoom,
+  type DraftTeam,
+} from "@/data/draft-format";
 import { getHero } from "@/data/heroes";
 import { MSC_2026_META_PRIORITY } from "@/data/meta-priority";
 import { TeamPanel } from "./team-panel";
 import { HeroGrid } from "./hero-grid";
 import { SuggestionPanel } from "./suggestion-panel";
 
-function SideSelect({ onSelect }: { onSelect: (side: DraftTeam) => void }) {
+function SideSelect({
+  room,
+  onRoomChange,
+  onSelect,
+}: {
+  room: DraftRoom;
+  onRoomChange: (room: DraftRoom) => void;
+  onSelect: (side: DraftTeam) => void;
+}) {
   return (
     <div className="rounded-xl border border-border-subtle bg-background-elevated/60 p-8 text-center">
-      <h2 className="font-display text-xl font-semibold">Pilih posisi kamu</h2>
+      <h2 className="font-display text-xl font-semibold">Pilih room draft</h2>
       <p className="mx-auto mt-2 max-w-md text-sm text-foreground-muted">
-        Di draft turnamen, First Pick dan Second Pick punya prioritas ban/pick yang beda. Pilih salah satu
-        supaya simulator tahu mana &ldquo;kamu&rdquo; dan mana &ldquo;lawan&rdquo;.
+        Format ban/pick beda tergantung room: Tournament ala MPL/M Series, atau ranked Epic/Legend/Mythic
+        seperti di client game.
+      </p>
+      <div className="mt-5 flex flex-wrap justify-center gap-2">
+        {ALL_DRAFT_ROOMS.map((r) => (
+          <button
+            key={r}
+            type="button"
+            onClick={() => onRoomChange(r)}
+            className={`rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${
+              room === r
+                ? "border-accent-amber/60 bg-accent-amber/10 text-accent-amber"
+                : "border-border-subtle hover:border-white/30"
+            }`}
+          >
+            {DRAFT_ROOM_INFO[r].label}
+          </button>
+        ))}
+      </div>
+      <p className="mx-auto mt-3 max-w-md text-xs text-foreground-muted">{DRAFT_ROOM_INFO[room].description}</p>
+
+      <h3 className="mt-8 font-display text-lg font-semibold">Pilih posisi kamu</h3>
+      <p className="mx-auto mt-2 max-w-md text-sm text-foreground-muted">
+        First Pick dan Second Pick punya prioritas ban/pick yang beda. Pilih salah satu supaya simulator tahu
+        mana &ldquo;kamu&rdquo; dan mana &ldquo;lawan&rdquo;.
       </p>
       <div className="mt-6 flex flex-wrap justify-center gap-3">
         <button
@@ -46,8 +83,14 @@ function SideSelect({ onSelect }: { onSelect: (side: DraftTeam) => void }) {
 }
 
 export function DraftSimulator() {
+  const [room, setRoom] = useState<DraftRoom>("tournament");
   const [playerSide, setPlayerSide] = useState<DraftTeam | null>(null);
   const [state, dispatch] = useReducer(draftReducer, undefined, createInitialDraftState);
+
+  function startDraft(side: DraftTeam) {
+    dispatch({ type: "RESET", sequence: DRAFT_SEQUENCES[room] });
+    setPlayerSide(side);
+  }
 
   const currentStep = getCurrentStep(state);
   const complete = isDraftComplete(state);
@@ -79,18 +122,22 @@ export function DraftSimulator() {
   }, [state, currentStep]);
 
   const stepsDone = state.stepIndex;
-  const totalSteps = MLBB_DRAFT_SEQUENCE.length;
+  const totalSteps = state.sequence.length;
 
   if (!playerSide) {
-    return <SideSelect onSelect={setPlayerSide} />;
+    return <SideSelect room={room} onRoomChange={setRoom} onSelect={startDraft} />;
   }
 
   const suggestionsAreForPlayer = currentStep?.team === playerSide;
+  const banSlots = DRAFT_ROOM_INFO[room].bansPerSide;
 
   return (
     <div>
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
+          <p className="text-xs font-medium uppercase tracking-wide text-foreground-muted/70">
+            {DRAFT_ROOM_INFO[room].label}
+          </p>
           {complete ? (
             <p className="font-semibold text-emerald-400">Draft selesai!</p>
           ) : (
@@ -107,7 +154,7 @@ export function DraftSimulator() {
             onClick={() => setPlayerSide(null)}
             className="rounded-md border border-border-subtle px-3 py-1.5 text-sm font-medium hover:border-white/30"
           >
-            Ganti Sisi
+            Ganti Room / Sisi
           </button>
           <button
             type="button"
@@ -126,6 +173,7 @@ export function DraftSimulator() {
           bans={state.bansA}
           picks={state.picksA}
           activeTeam={currentStep?.team}
+          banSlots={banSlots}
         />
         <div className="hidden items-center justify-center text-sm font-semibold text-foreground-muted/50 lg:flex">
           VS
@@ -137,6 +185,7 @@ export function DraftSimulator() {
           picks={state.picksB}
           activeTeam={currentStep?.team}
           align="right"
+          banSlots={banSlots}
         />
       </div>
 
