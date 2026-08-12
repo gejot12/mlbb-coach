@@ -65,6 +65,10 @@ export default async function AdminInquiriesPage() {
                 <p className="mt-2 text-sm">
                   <span className="font-medium">Jadwal: </span>
                   {inquiry.desired_schedule}
+                  <span className="text-foreground/50">
+                    {" "}
+                    ({inquiry.session_date} · {inquiry.session_slot})
+                  </span>
                 </p>
                 {inquiry.notes && (
                   <p className="mt-1 text-sm text-foreground/70">

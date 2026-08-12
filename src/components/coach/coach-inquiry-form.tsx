@@ -3,6 +3,8 @@
 import { useActionState } from "react";
 import { submitCoachInquiry, type CoachInquiryFormState } from "@/lib/actions/coach-inquiry";
 import { PREFERRED_ROLE_OPTIONS } from "@/lib/validation/coach-inquiry";
+import { SessionSlotPicker } from "./session-slot-picker";
+import type { SessionSlotCount } from "@/lib/types/coach-inquiry";
 
 const initialCoachInquiryState: CoachInquiryFormState = { status: "idle" };
 
@@ -16,7 +18,13 @@ const inputClass = `${fieldBaseClass} bg-transparent`;
 const selectClass = `${fieldBaseClass} bg-background-elevated text-foreground`;
 const labelClass = "text-sm font-medium";
 
-export function CoachInquiryForm() {
+export function CoachInquiryForm({
+  dates,
+  slotCounts,
+}: {
+  dates: string[];
+  slotCounts: SessionSlotCount[];
+}) {
   const [state, formAction, pending] = useActionState(submitCoachInquiry, initialCoachInquiryState);
 
   if (state.status === "success") {
@@ -81,18 +89,13 @@ export function CoachInquiryForm() {
       </div>
 
       <div>
-        <label htmlFor="desired_schedule" className={labelClass}>
-          Jadwal yang diinginkan
-        </label>
-        <textarea
-          id="desired_schedule"
-          name="desired_schedule"
-          required
-          rows={3}
-          placeholder="mis. Sabtu-Minggu malam, atau sebutkan hari & jam yang kamu punya"
-          className={`mt-1 ${inputClass}`}
-        />
-        {fieldErrors.desired_schedule && <p className="mt-1 text-xs text-rose-500">{fieldErrors.desired_schedule[0]}</p>}
+        <p className={labelClass}>Jadwal sesi</p>
+        <p className="mt-0.5 text-xs text-foreground/50">
+          Slot 2 jam, mulai jam 19:00 WIB ke atas. Maks 10 orang per slot.
+        </p>
+        <div className="mt-2">
+          <SessionSlotPicker dates={dates} slotCounts={slotCounts} fieldErrors={fieldErrors} />
+        </div>
       </div>
 
       <div>

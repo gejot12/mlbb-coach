@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { SESSION_SLOTS, upcomingSessionDates } from "@/data/coach-session-slots";
 
 export const PREFERRED_ROLE_OPTIONS = ["exp", "jungle", "mid", "gold", "roam", "belum yakin"] as const;
 
@@ -7,7 +8,10 @@ export const coachInquirySchema = z.object({
   contact: z.string().trim().min(3, "Isi email atau nomor WhatsApp yang valid").max(200),
   preferred_role: z.enum(PREFERRED_ROLE_OPTIONS).optional().or(z.literal("")),
   current_rank: z.string().trim().max(100).optional().or(z.literal("")),
-  desired_schedule: z.string().trim().min(3, "Ceritakan jadwal yang kamu inginkan").max(500),
+  session_date: z
+    .string()
+    .refine((v) => upcomingSessionDates().includes(v), "Pilih tanggal yang tersedia di kalender"),
+  session_slot: z.enum(SESSION_SLOTS, { message: "Pilih jam sesi" }),
   notes: z.string().trim().max(1000).optional().or(z.literal("")),
   // Honeypot: real users never fill this (it's visually hidden). Any value = bot.
   website: z.string().max(0, "Spam terdeteksi").optional().or(z.literal("")),
@@ -21,7 +25,8 @@ export function parseCoachInquiryFormData(formData: FormData) {
     contact: formData.get("contact") ?? "",
     preferred_role: formData.get("preferred_role") ?? "",
     current_rank: formData.get("current_rank") ?? "",
-    desired_schedule: formData.get("desired_schedule") ?? "",
+    session_date: formData.get("session_date") ?? "",
+    session_slot: formData.get("session_slot") ?? "",
     notes: formData.get("notes") ?? "",
     website: formData.get("website") ?? "",
   });
