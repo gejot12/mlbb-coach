@@ -6,8 +6,14 @@ import { PREFERRED_ROLE_OPTIONS } from "@/lib/validation/coach-inquiry";
 
 const initialCoachInquiryState: CoachInquiryFormState = { status: "idle" };
 
-const inputClass =
-  "w-full rounded-md border border-black/10 bg-transparent px-3 py-2 text-sm outline-none focus:border-amber-500/60 dark:border-white/10";
+const fieldBaseClass =
+  "w-full rounded-md border border-black/10 px-3 py-2 text-sm outline-none focus:border-amber-500/60 dark:border-white/10";
+const inputClass = `${fieldBaseClass} bg-transparent`;
+// Select needs an explicit solid background (not transparent): the native option-list
+// popup renders using the <select>'s own background/text color, not the page's — with
+// bg-transparent it fell back to the browser's white default, making the near-white
+// --foreground text unreadable ("putih semua").
+const selectClass = `${fieldBaseClass} bg-background-elevated text-foreground`;
 const labelClass = "text-sm font-medium";
 
 export function CoachInquiryForm() {
@@ -57,7 +63,7 @@ export function CoachInquiryForm() {
           <label htmlFor="preferred_role" className={labelClass}>
             Role yang mau dilatih
           </label>
-          <select id="preferred_role" name="preferred_role" defaultValue="" className={`mt-1 ${inputClass}`}>
+          <select id="preferred_role" name="preferred_role" defaultValue="" className={`mt-1 ${selectClass}`}>
             <option value="">— Pilih —</option>
             {PREFERRED_ROLE_OPTIONS.map((role) => (
               <option key={role} value={role}>

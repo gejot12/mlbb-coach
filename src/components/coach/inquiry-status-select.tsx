@@ -19,7 +19,7 @@ export function InquiryStatusSelect({ id, status }: { id: string; status: CoachI
           updateInquiryStatus(id, next);
         });
       }}
-      className="rounded-md border border-black/10 bg-transparent px-2 py-1 text-sm capitalize disabled:opacity-50 dark:border-white/10"
+      className="rounded-md border border-black/10 bg-background-elevated px-2 py-1 text-sm capitalize text-foreground disabled:opacity-50 dark:border-white/10"
     >
       {STATUS_OPTIONS.map((s) => (
         <option key={s} value={s}>
