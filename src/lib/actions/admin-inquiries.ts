@@ -10,3 +10,11 @@ export async function updateInquiryStatus(inquiryId: string, status: CoachInquir
   if (error) throw error;
   revalidatePath("/coach/admin");
 }
+
+export async function deleteInquiry(inquiryId: string): Promise<void> {
+  const supabase = createSupabaseServiceClient();
+  const { error } = await supabase.from("coach_inquiries").delete().eq("id", inquiryId);
+  if (error) throw error;
+  revalidatePath("/coach/admin");
+  revalidatePath("/coach");
+}

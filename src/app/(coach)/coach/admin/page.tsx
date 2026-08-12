@@ -2,6 +2,7 @@ import { createSupabaseServiceClient, isSupabaseServiceConfigured } from "@/lib/
 import type { CoachInquiry } from "@/lib/types/coach-inquiry";
 import { logoutAdmin } from "@/lib/actions/admin-auth";
 import { InquiryStatusSelect } from "@/components/coach/inquiry-status-select";
+import { DeleteInquiryButton } from "@/components/coach/delete-inquiry-button";
 import { Card } from "@/components/ui/card";
 import { SupabaseSetupNotice } from "@/components/ui/supabase-setup-notice";
 
@@ -46,7 +47,10 @@ export default async function AdminInquiriesPage() {
                     <p className="font-medium">{inquiry.name}</p>
                     <p className="text-sm text-foreground/60">{inquiry.contact}</p>
                   </div>
-                  <InquiryStatusSelect id={inquiry.id} status={inquiry.status} />
+                  <div className="flex items-center gap-3">
+                    <InquiryStatusSelect id={inquiry.id} status={inquiry.status} />
+                    <DeleteInquiryButton id={inquiry.id} name={inquiry.name} />
+                  </div>
                 </div>
                 <dl className="mt-3 flex flex-wrap gap-x-4 text-sm text-foreground/70">
                   {inquiry.preferred_role && (
