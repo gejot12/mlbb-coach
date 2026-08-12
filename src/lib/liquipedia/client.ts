@@ -10,22 +10,27 @@
  *  - CC-BY-SA 3.0 attribution to Liquipedia is required wherever this data is displayed
  *    (handled on the matches pages, conditional on `source === 'scraper'`).
  *
- * CORRECTION (confirmed by Liquipedia staff): LPDB is a modern REST API (OpenAPI 3), NOT
- * the MediaWiki Cargo query API — an earlier version of this file wrongly guessed a Cargo
- * shape (`action=cargoquery`) and was rewritten from scratch rather than patched.
+ * The official docs are only visible after logging into the LiquipediaDB Dashboard with an
+ * approved API key, so the request shape here is cross-confirmed from a widely used,
+ * actively maintained third-party client (`npldevfr/liquipedia-client`, MIT, on Packagist)
+ * rather than guessed:
+ *  - Base URL: https://api.liquipedia.net/api/v3/
+ *  - Auth header: `Authorization: Apikey <key>` (NOT "Bearer" — a previous version of this
+ *    file guessed Bearer and was wrong).
+ *  - Endpoint path is singular: `/match` (not `/matches`).
+ *  - Filtering uses Cargo-style bracket conditions via a `conditions` query param, e.g.
+ *    `[[wiki::mobilelegends]] AND ([[tournament::MSC 2026]])`, not plain `tournament=` params.
+ *  - `query` selects fields (comma-separated), `order` sorts as `"field ASC|DESC"`.
+ * This is still not the primary-source docs, so treat field names as high-confidence but
+ * verify against the dashboard docs once LIQUIPEDIA_API_KEY is approved.
  *
  * The `LpdbMatch` response shape below IS confirmed — it's taken directly from a real
  * example in the liquipedia.net/api docs (shown for the `valorant` wiki; the shape is the
- * same for `mobilelegends`, only field values differ). What's still UNCONFIRMED is the
- * request side: the exact endpoint path and query-parameter syntax for filtering by wiki /
- * tournament / date range weren't visible in what was shared. `LPDB_BASE_URL` and the
- * request-building in `queryMatches` are placeholders — fill them in from the real docs
- * (or an example request/cURL snippet) once available, rather than guessing further.
+ * same for `mobilelegends`, only field values differ).
  */
 
 const MIN_REQUEST_INTERVAL_MS = 60_000; // 60 req/hour ceiling -> at most one request per minute
 
-// TODO: confirm the real request path/params — this is an unverified placeholder.
 const LPDB_BASE_URL = "https://api.liquipedia.net/api/v3";
 
 let lastRequestAt = 0;
@@ -60,7 +65,7 @@ async function throttledFetch(url: URL): Promise<Response> {
   const response = await fetch(url, {
     headers: {
       "User-Agent": getUserAgent(),
-      "Authorization": `Bearer ${getApiKey()}`,
+      "Authorization": `Apikey ${getApiKey()}`,
       "Accept-Encoding": "gzip",
     },
     // Cache aggressively per the terms ("re-use / cache results for as long as possible").
@@ -109,18 +114,21 @@ export interface LpdbMatch {
 }
 
 /**
- * Fetches matches for a tournament from the `mobilelegends` wiki. The endpoint path and
- * query-parameter names below are NOT yet confirmed — see the file-level comment. Update
- * the URL construction once the real request format is available; the response parsing
- * (`LpdbMatch`) can stay as-is since that part is already verified.
+ * Fetches matches for a tournament from the `mobilelegends` wiki. Filtering uses a
+ * Cargo-style bracket condition (`[[field::value]]`) rather than a plain query param — see
+ * the file-level comment for where this request shape comes from.
  */
 export async function queryMatches(tournamentQuery: string, limit = 50): Promise<LpdbMatch[]> {
-  const url = new URL(`${LPDB_BASE_URL}/matches`);
+  const url = new URL(`${LPDB_BASE_URL}/match`);
   url.searchParams.set("wiki", "mobilelegends");
-  url.searchParams.set("tournament", tournamentQuery);
+  url.searchParams.set("conditions", `[[tournament::${tournamentQuery}]]`);
+  url.searchParams.set("order", "date DESC");
   url.searchParams.set("limit", String(limit));
 
   const response = await throttledFetch(url);
-  const json = (await response.json()) as { result?: LpdbMatch[] } | LpdbMatch[];
+  const json = (await response.json()) as { result?: LpdbMatch[]; error?: string } | LpdbMatch[];
+  if (!Array.isArray(json) && json.error) {
+    throw new Error(`Liquipedia API error: ${json.error}`);
+  }
   return Array.isArray(json) ? json : (json.result ?? []);
 }
