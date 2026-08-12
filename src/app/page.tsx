@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { Card } from "@/components/ui/card";
+import { HEROES } from "@/data/heroes";
 
 const FEATURES = [
   {
@@ -44,7 +45,7 @@ const FEATURES = [
 ];
 
 const STATS = [
-  { value: "24", label: "Hero guide" },
+  { value: String(HEROES.length), label: "Hero guide" },
   { value: "4", label: "Liga kompetitif" },
   { value: "20", label: "Langkah draft" },
 ];
