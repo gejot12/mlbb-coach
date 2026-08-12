@@ -141,7 +141,6 @@ export const HERO_RELEASE_YEAR: Record<string, number> = {
   kaja: 2018,
   ruby: 2017,
   keryn: 2025,
-  phylax: 2025,
 };
 
 export function getHeroReleaseYear(slug: string): number {

@@ -133,7 +133,6 @@ import { hero as suyou } from './suyou';
 import { hero as kaja } from './kaja';
 import { hero as ruby } from './ruby';
 import { hero as keryn } from './keryn';
-import { hero as phylax } from './phylax';
 
 export const HEROES: Hero[] = [
   tigreal,
@@ -269,7 +268,6 @@ export const HEROES: Hero[] = [
   kaja,
   ruby,
   keryn,
-  phylax,
 ];
 
 const HEROES_BY_SLUG = new Map(HEROES.map((h) => [h.slug, h]));
