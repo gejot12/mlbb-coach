@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Split push atau bantu rotasi grup tergantung kebutuhan tim.' },
     { minute: 19, action: 'Teamfight: area fear ke carry musuh yang mencoba kabur, kejar dengan speed curian.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Soul Devourer',
+      description:
+        'Setiap kali Phoveus memberi damage ke musuh, ia mencuri sedikit movement speed dari musuh tersebut dan menambahkannya ke dirinya sendiri untuk sementara.',
+    },
+    {
+      type: 'skill1',
+      name: 'Rift of Fear',
+      description:
+        'Melesat ke arah yang dipilih, memberi damage ke musuh yang dilewati sekaligus menambah stack pencurian speed.',
+    },
+    {
+      type: 'skill2',
+      name: 'Frenzy',
+      description:
+        'Menciptakan area fear di sekitar Phoveus yang membuat musuh di dalamnya ketakutan (tidak bisa mengontrol arah gerak) untuk sesaat.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Endless Nightmare',
+      description:
+        'Menarik semua musuh di area sekitar mendekat ke Phoveus sambil memberi damage besar, sangat efektif mengunci carry yang mencoba kabur.',
+    },
+  ],
 };

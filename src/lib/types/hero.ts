@@ -15,6 +15,15 @@ export interface RotationNote {
   action: string;
 }
 
+export type SkillType = 'passive' | 'skill1' | 'skill2' | 'ultimate';
+
+export interface HeroSkill {
+  type: SkillType;
+  /** In-game skill name. */
+  name: string;
+  description: string;
+}
+
 export interface Hero {
   slug: string;
   name: string;
@@ -30,4 +39,6 @@ export interface Hero {
   synergizesWith: string[];
   builds: ItemBuild[];
   rotation: RotationNote[];
+  /** Passive + Skill 1 + Skill 2 + Ultimate, in that order. */
+  skills: HeroSkill[];
 }

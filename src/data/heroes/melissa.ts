@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 15, action: 'Grouping dengan tim, lebih berani posisi semi-agresif berkat shield.' },
     { minute: 20, action: 'Teamfight: jangan takut jadi target dive assassin, shield menyerap combo awal mereka.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Master Puppeteer',
+      description:
+        'Boneka Doll yang mengikuti Melissa memberinya shield tambahan ketika berada di dekatnya, dan basic attack yang mengenai musuh menambah stack.',
+    },
+    {
+      type: 'skill1',
+      name: 'Butterfly Bullet',
+      description:
+        'Melempar pisau ke arah target garis lurus yang bisa mengenai beberapa musuh sekaligus, memberi damage.',
+    },
+    {
+      type: 'skill2',
+      name: 'Fluorescent Spikes',
+      description:
+        'Doll bergerak ke posisi tertentu membentuk tali cahaya dengan Melissa; musuh yang menyentuh tali terkena damage dan slow.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Starlium Blast',
+      description:
+        'Menembakkan sinar energi jarak sangat jauh berbentuk garis lurus yang memberi damage besar ke semua musuh yang terkena.',
+    },
+  ],
 };

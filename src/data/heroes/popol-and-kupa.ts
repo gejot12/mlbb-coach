@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 15, action: 'Grouping dengan tim, posisi belakang dengan menara sebagai zoning tambahan.' },
     { minute: 20, action: 'Teamfight: tempatkan menara di jalur masuk assassin sebelum fight dimulai.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Best Partner',
+      description:
+        'Kupa (si beruang) selalu mengikuti dan ikut menyerang bersama Popol; keduanya saling melengkapi damage dan kontrol saat bertarung.',
+    },
+    {
+      type: 'skill1',
+      name: 'Spear Throw',
+      description:
+        'Popol melempar tombak ke arah garis lurus, memberi damage ke musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: "Kupa's Rage",
+      description:
+        'Kupa melompat menyerang area yang dipilih, memberi damage dan sedikit knock back ke musuh di sekitarnya.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Fully-braced Kupa',
+      description:
+        'Kupa berubah menjadi menara jebakan stasioner yang otomatis menyerang musuh di sekitarnya dan memberi vision area, sementara Popol bebas bergerak terpisah.',
+    },
+  ],
 };

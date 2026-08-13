@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Terus camp titik rawan musuh yang jarang beli vision.' },
     { minute: 18, action: 'Teamfight: masuk dari stealth ke target paling berbahaya sebelum fight utama dimulai.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: "Wolf's Instinct",
+      description:
+        'Natalia menjadi tidak terlihat musuh selama berada di dalam semak, dan mendapat bonus movement speed saat keluar dari stealth.',
+    },
+    {
+      type: 'skill1',
+      name: 'Claw Strike',
+      description:
+        'Menerkam ke arah target dengan cakar, memberi damage dan memperlambat musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Silent Blade',
+      description:
+        'Melancarkan rentetan cakar cepat ke target di depan, memberi damage berturut-turut dalam area kecil.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Coup de Grace',
+      description:
+        'Melancarkan serangan eksekusi yang memberi damage true tambahan besar ke musuh ber-HP rendah, lalu membuat Natalia kembali stealth.',
+    },
+  ],
 };

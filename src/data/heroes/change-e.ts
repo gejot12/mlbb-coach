@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Grouping dengan tim, tetap di posisi paling belakang dan aman.' },
     { minute: 19, action: 'Teamfight: poke terus dari jarak jauh, simpan ultimate untuk finishing target HP rendah.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Starmoon Imprint',
+      description:
+        "Skill Chang'e menambah stack pada musuh yang terkena; stack maksimal akan meledak memberi damage tambahan dan slow.",
+    },
+    {
+      type: 'skill1',
+      name: 'Starmoon Rush',
+      description:
+        "Mengirim orbit proyektil yang mengelilingi Chang'e sambil bergerak, memberi damage berulang ke musuh yang dilewati.",
+    },
+    {
+      type: 'skill2',
+      name: 'Waxing Moon',
+      description:
+        'Melontarkan proyektil ke area yang dipilih, memberi damage ke musuh dan menambah stack passive dari jarak jauh.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Starmoon Fall',
+      description:
+        'Menembakkan proyektil skill-shot dengan jangkauan sangat jauh lintas map, memberi damage besar ke musuh pertama yang terkena.',
+    },
+  ],
 };

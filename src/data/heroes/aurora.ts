@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Grouping dengan tim, tetap di belakang formasi.' },
     { minute: 19, action: 'Teamfight: freeze area sebelum musuh dive, lanjut burst combo ultimate.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Frost Shield',
+      description:
+        'Aurora mendapat shield sesaat setiap kali menggunakan skill, membantunya bertahan saat poke atau kena harass di lane.',
+    },
+    {
+      type: 'skill1',
+      name: 'Frostfire Sphere',
+      description:
+        'Menembakkan bola es garis lurus yang memberi damage magic dan sedikit slow ke musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Ice Blast',
+      description:
+        'Membekukan area di sekitar target yang dipilih, menahan pergerakan musuh di dalamnya untuk beberapa saat.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Absolute Zero',
+      description:
+        'Membekukan area luas di sekitar Aurora, membuat semua musuh di dalamnya benar-benar tidak bisa bergerak (frozen) sambil terkena damage.',
+    },
+  ],
 };

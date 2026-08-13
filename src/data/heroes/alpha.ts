@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Split push atau bantu rotasi grup tergantung kebutuhan tim.' },
     { minute: 19, action: 'Teamfight: masuk bersama Beta untuk burst combo ke backline musuh.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Overdrive',
+      description:
+        'Alpha mendapat shield dan bonus movement speed setelah menggunakan skill, membantunya bertahan dan mengejar musuh saat combo.',
+    },
+    {
+      type: 'skill1',
+      name: 'Ion Blade',
+      description:
+        'Menyerang ke depan dengan pedang energi, memberi damage ke musuh dalam area garis pendek di depan Alpha.',
+    },
+    {
+      type: 'skill2',
+      name: 'Impact Wave',
+      description:
+        'Alpha menghantam tanah dengan Beta, memberi damage dan sedikit knock-up ke musuh di area sekitar titik hantaman.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Overdrive Beta',
+      description:
+        'Melepas Beta untuk menyerang berulang kali ke target yang dipilih, memberi damage besar bertubi-tubi dari jarak dekat.',
+    },
+  ],
 };

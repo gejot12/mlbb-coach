@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Snowball dengan terus memburu carry musuh yang terisolasi.' },
     { minute: 18, action: 'Teamfight: masuk dari flank setelah CC utama musuh terpakai.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Wind Blade',
+      description:
+        'Basic attack yang mengenai musuh mengurangi sisa cooldown skill pertama Lancelot, mempercepat rotasi combo dash-nya.',
+    },
+    {
+      type: 'skill1',
+      name: 'Thorned Rose',
+      description:
+        'Menusuk maju ke arah target, memberi damage garis pendek dan mendekatkan Lancelot ke musuh.',
+    },
+    {
+      type: 'skill2',
+      name: 'Puncture Steel',
+      description:
+        'Berputar sambil menyerang area di sekitarnya, bisa dipakai dua kali berturut-turut untuk damage dan mobilitas tambahan.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Reservoir of Sanity',
+      description:
+        'Melesat cepat dan kebal sesaat sambil melancarkan rangkaian tebasan ke semua musuh di sekitarnya — combo eksekusi andalan Lancelot.',
+    },
+  ],
 };

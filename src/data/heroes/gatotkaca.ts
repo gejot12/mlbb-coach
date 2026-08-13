@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Jadi frontline saat grouping, tarik perhatian musuh sebanyak mungkin.' },
     { minute: 19, action: 'Teamfight: berdiri di depan formasi, ultimate reflect damage basic attack musuh.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: "Kuda Sembrani's Power",
+      description:
+        'Gatotkaca mendapat tambahan physical defense secara permanen setiap kali level bertambah.',
+    },
+    {
+      type: 'skill1',
+      name: 'Iron Fist',
+      description:
+        'Menghantamkan tinju ke area di depan Gatotkaca, memberi damage dan sedikit knock-up ke musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Sacred Bull Rush',
+      description:
+        'Meluncur ke arah target, memberi damage dan menahan pergerakan (immobilize) musuh yang tertabrak.',
+    },
+    {
+      type: 'ultimate',
+      name: "Steel-Cast Bunker's Wrath",
+      description:
+        'Melapisi diri dengan armor baja yang memantulkan sebagian damage basic attack musuh kembali kepada mereka selama durasi aktif.',
+    },
+  ],
 };

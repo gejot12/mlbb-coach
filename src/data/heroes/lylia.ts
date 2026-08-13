@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Grouping dengan tim, portal memudahkan reposisi cepat saat terancam.' },
     { minute: 19, action: 'Teamfight: gunakan illusion untuk mengecoh assassin yang mencoba fokus kamu.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: "Fairy's Blessing",
+      description:
+        'Skill Lylia menandai musuh yang terkena, memicu ledakan damage tambahan setelah delay singkat.',
+    },
+    {
+      type: 'skill1',
+      name: 'Abyssal Illusion',
+      description:
+        'Menciptakan ilusi diri yang ikut menyerang, membuat musuh sulit menentukan mana Lylia yang asli.',
+    },
+    {
+      type: 'skill2',
+      name: 'Astral Fall',
+      description:
+        'Membuka portal yang bisa dipakai untuk berteleport, memberi mobilitas cepat untuk kabur atau reposisi.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Devouring Nightmare',
+      description:
+        'Menciptakan zona bahaya di area luas yang terus memberi damage berulang ke semua musuh yang berada di dalamnya.',
+    },
+  ],
 };

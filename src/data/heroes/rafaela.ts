@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Selalu dekat carry utama, siap heal saat mereka jadi target.' },
     { minute: 19, action: 'Teamfight: aktifkan ultimate speed boost untuk inisiasi atau kabur cepat.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Grace',
+      description:
+        'Rafaela mendapat bonus movement speed saat bergerak ke arah ally dengan HP rendah, membantunya cepat merespons ally yang butuh bantuan.',
+    },
+    {
+      type: 'skill1',
+      name: 'Illumination',
+      description:
+        'Melepaskan cahaya di area sekitar yang memberi heal ke ally dan memperlambat musuh yang terkena di dalamnya.',
+    },
+    {
+      type: 'skill2',
+      name: 'Wings of Radiance',
+      description:
+        'Rafaela terbang menembus ke arah yang dipilih, memberi damage ke musuh yang dilewati sekaligus reposisi cepat.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Overflowing Sanctity',
+      description:
+        'Memberi movement speed besar ke semua ally di sekitar untuk sementara waktu, sangat berguna untuk inisiasi cepat maupun kabur bersama tim.',
+    },
+  ],
 };

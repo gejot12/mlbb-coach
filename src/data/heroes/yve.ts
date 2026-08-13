@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Grouping dengan tim, tetap di posisi paling belakang.' },
     { minute: 19, action: 'Teamfight: zoning area fight dengan bintang sebelum burst combo ultimate.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Galactic Power',
+      description:
+        'Memberi Yve stack Galactic Power setiap kali Void Blast atau Void Crystal mengenai musuh; stack ini menambah serangan ekstra saat ultimate digunakan.',
+    },
+    {
+      type: 'skill1',
+      name: 'Void Blast',
+      description:
+        'Meledakkan energi galaksi di area target, memberi damage ke semua musuh dalam radiusnya.',
+    },
+    {
+      type: 'skill2',
+      name: 'Void Crystal',
+      description:
+        'Memunculkan kristal di area target yang memberi damage ke musuh terdekat; digunakan lagi untuk menembakkan energi ke arah tertentu yang memberi damage berulang dan slow.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Real World Manipulation',
+      description:
+        'Menciptakan Starfield di sekitar Yve selama beberapa detik; pemain bisa tap atau swipe layar berulang kali untuk menyerang musuh di dalamnya.',
+    },
+  ],
 };

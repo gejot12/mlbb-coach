@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Rotasi bebas antara frontline dan damage dealer sesuai kebutuhan tim.' },
     { minute: 19, action: 'Teamfight: buka dengan combo charge, lanjut finisher ke target yang sudah lemah.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Golden Right Hook',
+      description:
+        'Fredrinn mengumpulkan energi dari basic attack dan skill; saat penuh, serangan berikutnya memberi bonus damage besar dan heal.',
+    },
+    {
+      type: 'skill1',
+      name: 'Ring of Fire / Falling Comet',
+      description:
+        'Menghantam area di sekitar atau di depan Fredrinn tergantung mode combo, memberi damage ke musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Vanguard Fist / Extreme Force',
+      description:
+        'Menyerang ke depan dengan mode charge (tank, sedikit CC) atau mode finisher (damage tinggi), tergantung combo yang sedang aktif.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Wrath of the Beast',
+      description:
+        'Melompat ke area target, memberi damage dan crowd control ke musuh di sekitar titik pendaratan sebagai pembuka inisiasi.',
+    },
+  ],
 };

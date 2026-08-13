@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Grouping dengan tim, gunakan skeleton untuk zoning area fight.' },
     { minute: 19, action: 'Teamfight: ubah minion jadi skeleton lewat ultimate untuk bantuan damage tambahan.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Raise Dead',
+      description:
+        'Musuh yang tewas di dekat Vexana bisa dibangkitkan sebagai skeleton yang membantu menyerang dan bertahan di lane.',
+    },
+    {
+      type: 'skill1',
+      name: 'Bone Prison',
+      description:
+        'Melemparkan rantai tulang ke target area, mengunci pergerakan musuh yang terkena untuk waktu singkat.',
+    },
+    {
+      type: 'skill2',
+      name: 'Life Sacrifice',
+      description:
+        'Menandai target dengan kutukan yang menyerap HP dari musuh menuju Vexana selama durasi tertentu.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Skeletal Warriors',
+      description:
+        'Mengubah minion di sekitar area target menjadi pasukan skeleton bersenjata yang bertarung membantu Vexana untuk sementara waktu.',
+    },
+  ],
 };

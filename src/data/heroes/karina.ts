@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Snowball dengan terus memburu carry musuh yang terisolasi.' },
     { minute: 18, action: 'Teamfight: masuk dari flank, fokus target HP rendah untuk maksimalkan true damage ultimate.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Rage',
+      description:
+        'Menggunakan skill mengisi stack rage; setelah penuh, basic attack berikutnya mendapat bonus damage dan efek tambahan.',
+    },
+    {
+      type: 'skill1',
+      name: 'Dancing Blade',
+      description:
+        'Mengayunkan bilah di sekitar Karina, memberi damage ke semua musuh dalam radius area.',
+    },
+    {
+      type: 'skill2',
+      name: 'Wave of Destruction',
+      description:
+        'Karina berteleport ke arah target sambil menandai musuh di sekitarnya dengan orb yang meledak setelah delay singkat.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Aurora Blade',
+      description:
+        'Memberi true damage besar ke target tunggal yang scaling dengan persentase HP yang sudah hilang dari musuh — makin lemah musuh, makin sakit ultimate ini.',
+    },
+  ],
 };

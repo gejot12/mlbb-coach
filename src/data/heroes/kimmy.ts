@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 15, action: 'Grouping dengan tim, posisi belakang tapi fleksibel ganti mode senjata.' },
     { minute: 20, action: 'Teamfight: mode pistol magic untuk anti-tank, mode senapan untuk damage sustained.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Full Metal Jacket',
+      description:
+        'Berganti antara mode pistol magic dan senapan physical memberi bonus damage pada serangan berikutnya setelah switch.',
+    },
+    {
+      type: 'skill1',
+      name: 'Steady as Rock',
+      description:
+        'Kimmy mendapat shield jika diam di tempat selama beberapa saat, membantu bertahan saat poke jarak jauh.',
+    },
+    {
+      type: 'skill2',
+      name: 'Pursuit',
+      description:
+        'Melompat mundur atau ke arah tertentu untuk mobilitas, membantu menjaga jarak aman dari musuh yang mendekat.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Sunder Armor',
+      description:
+        'Menembakkan laser magic garis lurus jarak sangat jauh, memberi damage besar ke semua musuh yang dilewati — efektif menembus tank.',
+    },
+  ],
 };

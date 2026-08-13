@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Selalu link ke hero yang paling butuh peel/mobility saat rotasi grup.' },
     { minute: 18, action: 'Teamfight: buka fight dengan ultimate ke carry musuh sebelum tim sendiri masuk.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Puppet of Love',
+      description:
+        'Ketika HP Angela mencapai nol, ia berubah jadi boneka sementara alih-alih mati, memberinya kesempatan bertahan lebih lama.',
+    },
+    {
+      type: 'skill1',
+      name: 'Heart Shots',
+      description:
+        'Menembakkan proyektil hati ke arah musuh, memberi damage magic ke target yang terkena dalam garis lurus.',
+    },
+    {
+      type: 'skill2',
+      name: 'Sweet Dreams',
+      description:
+        'Membuat musuh di area sekitar tertidur sejenak sehingga tidak bisa bergerak atau menyerang, cocok untuk mengunci sebelum combo.',
+    },
+    {
+      type: 'ultimate',
+      name: "Cupid's Arrow",
+      description:
+        'Angela menyatu (link) dengan hero tim yang dipilih dari jarak sangat jauh, memberi shield dan bertarung bersama host tersebut.',
+    },
+  ],
 };

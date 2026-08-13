@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Kontrol lord/turtle, posisikan diri di depan untuk stop dive musuh.' },
     { minute: 20, action: 'Teamfight: ultimate ke carry musuh yang paling mengandalkan dash untuk masuk/keluar.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Tough Guy',
+      description:
+        'Mengurangi durasi efek crowd control yang mengenai Khufra, membuatnya lebih sulit dikunci lama oleh musuh.',
+    },
+    {
+      type: 'skill1',
+      name: 'Bouncing Ball',
+      description:
+        'Khufra berubah jadi bola dan menggelinding ke depan, memberi damage dan stun ke musuh pertama yang tertabrak.',
+    },
+    {
+      type: 'skill2',
+      name: "Sumon's Fist",
+      description:
+        'Melepaskan gelombang energi yang menarik musuh di area terkena ke tengah, mengumpulkan mereka jadi satu titik.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Speed of Light',
+      description:
+        'Menghentikan paksa dash/blink musuh dan langsung men-stun target tersebut — counter utama assassin mobile.',
+    },
+  ],
 };

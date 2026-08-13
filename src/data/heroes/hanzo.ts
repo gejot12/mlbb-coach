@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Snowball dengan terus memburu carry musuh yang terisolasi.' },
     { minute: 18, action: 'Teamfight: masuk lewat dinding ke backline musuh dengan mode roh.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Ninjutsu: Mounting Soul',
+      description:
+        'Membunuh atau membantu membunuh musuh memberi Hanzo soul; soul ini dipakai untuk mengaktifkan ultimate mode roh tanpa menunggu cooldown penuh.',
+    },
+    {
+      type: 'skill1',
+      name: 'Ninjutsu: Wind Blade',
+      description:
+        'Melempar bilah bulan sabit garis lurus ke depan, memberi damage ke semua musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Ninjutsu: Art of Enfeeblement',
+      description:
+        'Menandai musuh di area yang dipilih, memberi damage sekaligus melemahkan mereka untuk sesaat.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Spirit of Fox God',
+      description:
+        'Mengubah Hanzo menjadi wujud roh yang bisa menembus dinding dan kebal crowd control, memberi damage saat masuk dan keluar dari mode ini.',
+    },
+  ],
 };

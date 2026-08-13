@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Selalu menempel carry utama saat rotasi grup.' },
     { minute: 19, action: 'Teamfight: fokus heal carry yang paling banyak deal damage.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Nature Gifts',
+      description:
+        'Floryn otomatis membagikan sebagian gold dan exp yang didapatnya ke hero rekan yang sedang ia dampingi.',
+    },
+    {
+      type: 'skill1',
+      name: "Nature's Gift",
+      description:
+        'Melontarkan buah/proyektil ke hero rekan yang dipilih, memberi heal instan kepada mereka.',
+    },
+    {
+      type: 'skill2',
+      name: 'Blooming Rescue',
+      description:
+        'Bergerak cepat menuju hero rekan yang dipilih, memberi shield dan heal tambahan setelah sampai di dekatnya.',
+    },
+    {
+      type: 'ultimate',
+      name: "Nature's Cradle",
+      description:
+        'Memanggil area penyembuhan besar yang memberi heal terus-menerus ke seluruh hero rekan yang berada di dalamnya.',
+    },
+  ],
 };

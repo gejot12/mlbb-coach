@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Ikut grouping, isolasi carry musuh sebelum fight utama.' },
     { minute: 19, action: 'Teamfight: rantai carry musuh menjauh dari timnya sebelum tim sendiri all-in.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Warrior Deity Descends',
+      description:
+        'Barats mendapat shield dan bonus damage saat memasuki teamfight, membantunya bertahan lebih lama sebagai frontline.',
+    },
+    {
+      type: 'skill1',
+      name: 'Deific Smash',
+      description:
+        'Menghantam tanah di depan, memberi damage dan sedikit slow ke semua musuh yang terkena di area tersebut.',
+    },
+    {
+      type: 'skill2',
+      name: 'Chain of Judgement',
+      description:
+        'Melemparkan rantai ke musuh, menarik target yang terkena ke arah Barats sekaligus memberi damage.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Absolute Enforcement',
+      description:
+        'Barats membuat area dinding rantai di sekitarnya yang mencegah musuh di dalamnya kabur sambil memberi damage berkelanjutan — efektif mengisolasi carry.',
+    },
+  ],
 };

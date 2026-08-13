@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Jadi frontline saat grouping, gunakan tembok untuk memecah formasi musuh.' },
     { minute: 19, action: 'Teamfight: pisahkan carry musuh dari tim mereka dengan tembok sebelum fight utama.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Rock Skin',
+      description:
+        'Damage berulang dari sumber yang sama ke Grock berkurang secara bertahap, membuatnya makin tahan lama menghadapi burst combo yang sama.',
+    },
+    {
+      type: 'skill1',
+      name: 'Wrecking Ball',
+      description:
+        'Menerjang ke depan dengan lompatan area, memberi damage dan slow ke musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Rock Formation',
+      description:
+        'Memunculkan tembok batu di lokasi yang dipilih untuk memblokir jalur pergerakan minion maupun musuh.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Urgent Attack',
+      description:
+        'Menabrak maju ke arah musuh; kalau mendorong mereka menabrak tembok atau rintangan, damage dan stun yang diberikan jadi jauh lebih besar.',
+    },
+  ],
 };

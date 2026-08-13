@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Selalu dekat carry utama, siap melumpuhkan musuh yang mendekat.' },
     { minute: 19, action: 'Teamfight: transform carry/assassin musuh yang paling berbahaya sebelum fight utama.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Molina Summon',
+      description:
+        'Secara berkala memanggil peri Molina yang menyerang musuh terdekat secara otomatis, memberi damage tambahan.',
+    },
+    {
+      type: 'skill1',
+      name: 'Sacred Ground',
+      description:
+        'Melempar Molina ke titik yang dipilih, memberi damage dan memperlambat musuh yang terkena di area tersebut.',
+    },
+    {
+      type: 'skill2',
+      name: 'Molina Incantation',
+      description:
+        'Mengubah satu hero musuh menjadi Molina lucu untuk sementara, membuatnya tidak bisa menggunakan skill atau basic attack.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Play Together',
+      description:
+        'Menciptakan area magis yang memberi damage berkelanjutan dan menarik musuh di dalamnya sedikit demi sedikit ke arah pusat.',
+    },
+  ],
 };

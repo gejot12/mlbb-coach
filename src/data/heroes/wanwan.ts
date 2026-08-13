@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 15, action: 'Grouping dengan tim, mobilitas tinggi bikin lebih berani semi-agresif.' },
     { minute: 20, action: 'Teamfight: dash masuk-keluar cepat, fokus target yang formasinya sejajar untuk panah tembus.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Squirrel Battle Uniform',
+      description:
+        'Basic attack Wanwan menumpuk stack; pada stack maksimal, serangan berikutnya melepaskan ledakan energi tambahan.',
+    },
+    {
+      type: 'skill1',
+      name: 'Rolling the Shuttle',
+      description:
+        'Melompat dan berputar sambil menembakkan panah ke sekeliling, memberi damage ke musuh terdekat sekaligus reposisi.',
+    },
+    {
+      type: 'skill2',
+      name: 'Gale of Blades',
+      description:
+        'Melakukan dash cepat ke arah yang dipilih sambil meninggalkan bayangan, membantu menghindari skillshot dan CC musuh.',
+    },
+    {
+      type: 'ultimate',
+      name: "Nature's Punishment",
+      description:
+        'Menembakkan tiga panah energi lurus yang menembus semua musuh sejajar di jalurnya, memberi damage besar berturut-turut.',
+    },
+  ],
 };

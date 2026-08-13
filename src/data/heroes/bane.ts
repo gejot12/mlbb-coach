@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Ikut grouping, jadi damage dealer sekaligus semi-frontline.' },
     { minute: 19, action: 'Teamfight: masuk untuk trade damage racun berkelanjutan ke target priority.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Shrimp Pet',
+      description:
+        'Bane memiliki shrimp peliharaan yang berjaga di sekitarnya dan memberi peringatan dini saat ada musuh mendekat dari semak.',
+    },
+    {
+      type: 'skill1',
+      name: 'Concussive Blast',
+      description:
+        'Menembakkan tombak garis lurus ke musuh, memberi damage fisik ke target yang terkena dalam jangkauan menengah.',
+    },
+    {
+      type: 'skill2',
+      name: "Coral Blessing / Bane's Roar",
+      description:
+        'Memberi buff area ke sekitar Bane yang meningkatkan damage dan sedikit sustain untuk dirinya dan hero terdekat.',
+    },
+    {
+      type: 'ultimate',
+      name: "King's Roar",
+      description:
+        'Bane meraung dan menyerang area di sekitarnya, memberi damage racun berkelanjutan yang terus menggerogoti HP musuh di dalamnya.',
+    },
+  ],
 };

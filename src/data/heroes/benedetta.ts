@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Snowball dengan terus memburu carry musuh yang terisolasi.' },
     { minute: 18, action: 'Teamfight: masuk dari flank setelah CC utama musuh terpakai.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Poison Dagger',
+      description:
+        'Serangan dasar Benedetta memberi efek racun tambahan ke musuh, menambah damage berkelanjutan seiring waktu.',
+    },
+    {
+      type: 'skill1',
+      name: 'Combo Slash',
+      description:
+        'Menyerang cepat ke depan dengan pedang ganda, memberi damage fisik ke musuh dalam jangkauan dekat.',
+    },
+    {
+      type: 'skill2',
+      name: "Grace Blade / Frenzy",
+      description:
+        'Benedetta dash menembus musuh yang dilewatinya, memberi damage sekaligus reposisi cepat lewat mereka.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Coup de Grace',
+      description:
+        'Benedetta bisa dash berulang ke target yang sama selama musuh masih terkena efek marking, memberi damage besar tiap kali dash mendarat.',
+    },
+  ],
 };

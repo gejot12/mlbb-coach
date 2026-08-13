@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Terus cari peluang pick-off ke backline squishy musuh.' },
     { minute: 19, action: 'Teamfight: masuk dari flank, kunci carry musuh dengan ultimate sebelum fight utama.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Elegance',
+      description:
+        'Menggunakan skill menambah stack keanggunan; setelah stack penuh, basic attack berikutnya memberi bonus magic damage tambahan.',
+    },
+    {
+      type: 'skill1',
+      name: 'Wave of Force',
+      description:
+        'Melepaskan gelombang energi dari tubuhnya ke area sekitar, memberi damage sekaligus mendorong musuh menjauh.',
+    },
+    {
+      type: 'skill2',
+      name: 'Art of War',
+      description:
+        'Melesat maju ke arah yang dipilih, memberi damage ke musuh yang dilewati sekaligus reposisi cepat.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Wings of Justice',
+      description:
+        'Mengunci semua musuh di area yang dipilih dan menjatuhkan mereka berulang kali, memberi damage terus-menerus sambil menahan total pergerakan mereka.',
+    },
+  ],
 };

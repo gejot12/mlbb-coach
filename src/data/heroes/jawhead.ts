@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Ikut rotasi grup, cari peluang isolasi carry musuh sebelum fight utama.' },
     { minute: 19, action: 'Teamfight: lempar carry musuh menjauh dari timnya sebelum tim sendiri all-in.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Mechanical Feast',
+      description:
+        'Berhasil membantu atau menyelesaikan kill mempercepat cooldown skill Jawhead, membuatnya bisa terus mengejar target berikutnya.',
+    },
+    {
+      type: 'skill1',
+      name: 'Impact',
+      description:
+        'Menerjang maju ke arah yang dipilih, memberi damage dan stun ke musuh pertama yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Somersault',
+      description:
+        'Melompat ke arah target, menangkap dan melemparkannya ke belakang Jawhead, memberi damage dan mengubah posisi musuh.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Broken Blade',
+      description:
+        'Menangkap target dan melemparkannya sejauh mungkin menjauh dari posisi awal, memberi damage sekaligus mengisolasi target dari timnya.',
+    },
+  ],
 };

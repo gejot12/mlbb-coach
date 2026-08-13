@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Grouping dengan tim, tetap di posisi paling belakang.' },
     { minute: 19, action: 'Teamfight: dinding api di jalur masuk musuh sebelum fight utama dimulai.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Blaze',
+      description:
+        'Setiap skill yang mengenai musuh menambah stack terbakar; setelah cukup stack, musuh terkena ledakan damage tambahan.',
+    },
+    {
+      type: 'skill1',
+      name: 'Fireball',
+      description:
+        'Melemparkan bola api ke target area yang meledak setelah delay singkat, memberi damage ke semua musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Wall of Flame',
+      description:
+        'Memasang dinding api yang menghalangi jalur, memberi damage dan knock-up ke musuh yang menerjangnya.',
+    },
+    {
+      type: 'ultimate',
+      name: "Valir's Domain",
+      description:
+        'Memunculkan pilar-pilar api di area luas secara berurutan, memberi damage berulang pada musuh yang terjebak di dalamnya.',
+    },
+  ],
 };

@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 15, action: 'Cari peluang split push karena Karrie kuat 1v1 lawan tank penjaga lane.' },
     { minute: 20, action: 'Teamfight: fokus tank/frontline musuh dengan true damage, biarkan tim lain handle backline.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Void Vision',
+      description:
+        'Sebagian damage basic attack Karrie berubah jadi true damage, membuatnya sangat efektif menembus armor tebal.',
+    },
+    {
+      type: 'skill1',
+      name: 'Steel Ball',
+      description:
+        'Menembakkan proyektil garis lurus yang menembus dan memberi damage ke semua musuh yang dilewati.',
+    },
+    {
+      type: 'skill2',
+      name: 'Blessing of Fairy',
+      description:
+        'Memberi bonus movement speed dan attack speed untuk Karrie beberapa saat, mempermudah kiting saat kabur atau mengejar.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Wrath of Fairy',
+      description:
+        'Basic attack Karrie untuk sementara bisa menembus unit dan rintangan, memungkinkan dia menyerang lewat minion/hero yang menghalangi.',
+    },
+  ],
 };

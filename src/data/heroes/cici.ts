@@ -7,7 +7,7 @@ export const hero: Hero = {
   lanes: ['jungle'],
   difficulty: 'medium',
   summary:
-    'Fighter-assassin dengan rangkaian tendangan bela diri yang cepat dan mobilitas tinggi. Kuat memburu mage squishy di jungle/mid.',
+    'Fighter dengan senjata yo-yo yang memberi damage terus-menerus ke target terkunci dan mobilitas tinggi lewat lompatan berantai. Kuat memburu mage squishy di jungle/mid.',
   strongAgainst: ['eudora'],
   weakAgainst: ['akai'],
   synergizesWith: ['angela'],
@@ -24,5 +24,31 @@ export const hero: Hero = {
     { minute: 8, action: 'Kontrol turtle sambil terus cari peluang pick-off.' },
     { minute: 13, action: 'Snowball dengan terus memburu mage/marksman musuh yang terisolasi.' },
     { minute: 18, action: 'Teamfight: masuk dari flank, rangkaian combo ke target priority.' },
+  ],
+  skills: [
+    {
+      type: 'passive',
+      name: "Performer's Delight",
+      description:
+        'Cici mengumpulkan stack Delight setiap kali memberi damage, menambah movement speed dan spell vamp secara bertahap hingga maksimal.',
+    },
+    {
+      type: 'skill1',
+      name: 'Yo-Yo Blitz',
+      description:
+        'Melempar yo-yo ke musuh terdekat dan mengunci target untuk memberi damage berulang kali; Cici tetap bisa bergerak dan memakai skill lain selama serangan berlangsung.',
+    },
+    {
+      type: 'skill2',
+      name: 'Buoyant Bounce',
+      description:
+        'Cici melompat ke lokasi target; jika mendarat tepat di musuh, ia memberi damage lalu melompat lagi ke arah berikutnya untuk mengejar atau kabur.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Curtain Call',
+      description:
+        'Melempar yo-yo untuk menghubungkan satu hero musuh dengan musuh terdekat lainnya, memberi damage dan slow sambil menarik keduanya saling mendekat.',
+    },
   ],
 };

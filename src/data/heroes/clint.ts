@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 15, action: 'Grouping dengan tim, dash untuk reposisi cepat saat terancam.' },
     { minute: 20, action: 'Teamfight: kiting terus musuh melee, dash keluar kalau di-dive.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Trickshot',
+      description:
+        'Basic attack Clint memiliki peluang menembak dua kali sekaligus, meningkatkan damage per rangkaian serangannya.',
+    },
+    {
+      type: 'skill1',
+      name: 'Explosive Trap',
+      description:
+        'Menempatkan jebakan di area yang dipilih; musuh yang menginjaknya akan terkena damage dan sedikit slow.',
+    },
+    {
+      type: 'skill2',
+      name: "Gun's Blazing",
+      description:
+        'Menembakkan proyektil lurus yang menembus musuh di jalurnya, memberi damage ke semua yang terkena.',
+    },
+    {
+      type: 'ultimate',
+      name: "Grenade Gun's Blazing",
+      description:
+        'Melompat mundur (dash) sambil menembakkan rentetan tembakan ke arah depan, memberi mobilitas sekaligus damage besar ke musuh di depannya.',
+    },
+  ],
 };

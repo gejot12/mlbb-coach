@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Grouping dengan tim, tetap di posisi paling belakang.' },
     { minute: 19, action: 'Teamfight: gerbang dimensi ke formasi musuh yang berkumpul untuk burst maksimal.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Transcendence',
+      description:
+        'Skill Xavier yang mengenai musuh memberinya tambahan kecepatan gerak dan mengisi charge energi; pada charge penuh, cooldown skill berikutnya berkurang signifikan.',
+    },
+    {
+      type: 'skill1',
+      name: 'Infinite Extension',
+      description:
+        'Menembakkan peluru mistis yang menembus musuh yang dilewati; jarak tembaknya bertambah setiap kali mengenai musuh atau Mystic Barrier miliknya.',
+    },
+    {
+      type: 'skill2',
+      name: 'Mystic Field',
+      description:
+        'Memunculkan gerbang/barrier mistis yang bisa dipindah posisinya; musuh yang menyentuhnya kena damage dan slow, sementara sekutu mendapat bonus kecepatan gerak.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Dawning Light',
+      description:
+        'Melepaskan berkas cahaya mistis melintasi map yang memberi damage besar ke semua musuh yang dilewatinya, sekaligus memicu efek Transcendence.',
+    },
+  ],
 };

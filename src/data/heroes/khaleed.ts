@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Ikut grouping, jadi damage dealer sekaligus semi-frontline.' },
     { minute: 19, action: 'Teamfight: masuk dengan dash combo, manfaatkan sustain untuk bertahan lama di fight.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: "Sand Kingdom's Blessing",
+      description:
+        'Pedang Khaleed makin kuat setiap kali dia last-hit minion/monster jungle, dan dia mendapat regenerasi HP saat HP menipis.',
+    },
+    {
+      type: 'skill1',
+      name: 'Sand Eruption',
+      description:
+        'Menghantam tanah di sekitarnya, memberi damage dan knock-up ke musuh dalam area.',
+    },
+    {
+      type: 'skill2',
+      name: 'Rising Sand Dash',
+      description:
+        'Dash menembus target ke arah tertentu, memberi damage dan menandai musuh yang terkena untuk combo lanjutan.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Sandstorm Might',
+      description:
+        'Melesat cepat ke musuh yang sudah ditandai, memberi damage besar dan stun singkat — combo penutup andalan Khaleed.',
+    },
+  ],
 };

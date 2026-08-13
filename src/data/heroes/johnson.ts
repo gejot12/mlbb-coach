@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Selalu siap engage kejutan ke carry musuh yang terisolasi.' },
     { minute: 19, action: 'Teamfight: masuk mendadak dari sisi tak terduga dengan ultimate mobil, stun target priority.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Guardian Alert',
+      description:
+        'Ketika musuh mendekat, Johnson memberi peringatan otomatis kepada allies terdekat mengenai keberadaan musuh tersebut.',
+    },
+    {
+      type: 'skill1',
+      name: 'Direct Current',
+      description:
+        'Melepaskan gelombang listrik di area sekitarnya, memberi damage dan slow ke musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Big Force',
+      description:
+        'Mengumpulkan tenaga sesaat untuk memperkuat pertahanan dan menahan musuh di sekitarnya sebelum melepaskan efek tambahan.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Vroom!',
+      description:
+        'Berubah menjadi mobil yang bisa mengangkut allies dan melaju cepat ke lokasi manapun di map, menabrak musuh di jalurnya untuk memberi damage dan stun area.',
+    },
+  ],
 };

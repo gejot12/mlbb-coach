@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Split push atau rotasi grup, jadi ancaman konstan lawan sustain fighter lain.' },
     { minute: 19, action: 'Teamfight: masuk lebih dulu, manfaatkan regenerasi untuk bertahan lama di fight.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Blood Debt',
+      description:
+        'Thamuz meregenerasi HP berdasarkan damage yang ia terima maupun berikan, membuatnya sangat kuat dalam trade berkepanjangan.',
+    },
+    {
+      type: 'skill1',
+      name: 'Chains of Punishment',
+      description:
+        'Melontarkan rantai ke target, menarik dirinya sendiri mendekat sambil memberi damage pada musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Fires of War',
+      description:
+        'Mengaktifkan area api di sekitarnya yang damage-nya terus bertambah semakin lama skill ini aktif, kuat untuk trade jangka panjang.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Fist of Fire',
+      description:
+        'Berubah menjadi bentuk iblis dan menghantam ke depan, memberi damage besar area sekaligus meningkatkan sustain selama transformasi.',
+    },
+  ],
 };

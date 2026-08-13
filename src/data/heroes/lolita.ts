@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Selalu dekat carry utama, siap blokir proyektil yang mengarah ke mereka.' },
     { minute: 19, action: 'Teamfight: posisikan shield di depan carry untuk blokir burst combo musuh.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Ceasefire',
+      description:
+        'Mengurangi damage yang diterima Lolita dari basic attack musuh yang menyerang dari jarak jauh.',
+    },
+    {
+      type: 'skill1',
+      name: 'Shield Assault',
+      description:
+        'Menyeruduk maju dengan perisai, memberi damage dan sedikit knockback ke musuh yang tertabrak.',
+    },
+    {
+      type: 'skill2',
+      name: 'Mecha Legs',
+      description:
+        'Mengeluarkan perisai energi di area yang memblokir proyektil dan skillshot musuh yang lewat, melindungi ally di baliknya.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Fortress Tank',
+      description:
+        'Berubah menjadi mode mecha yang menembakkan laser terus-menerus ke semua musuh di sekitarnya selama durasi aktif.',
+    },
+  ],
 };

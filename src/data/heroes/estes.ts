@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Selalu dekat carry utama tim untuk sustain damage trade.' },
     { minute: 18, action: 'Teamfight: aktifkan ultimate heal saat tim mulai baku hantam, bukan di awal fight.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Fairy Wingbeat',
+      description:
+        'Estes secara perlahan memberi heal ke hero rekan yang berada di dekatnya seiring waktu.',
+    },
+    {
+      type: 'skill1',
+      name: 'Firefly Gleam',
+      description:
+        'Menembakkan proyektil ke arah musuh yang dipilih, memberi damage sekaligus meningkatkan efek heal pasif untuk sesaat.',
+    },
+    {
+      type: 'skill2',
+      name: 'Sacred Butterfly',
+      description:
+        'Memberi buff kepada satu hero rekan yang dipilih, meningkatkan damage dan defense mereka untuk sementara waktu.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Woodland Protection',
+      description:
+        'Memberi heal besar secara terus-menerus ke seluruh tim di manapun posisi mereka selama durasi ultimate aktif.',
+    },
+  ],
 };

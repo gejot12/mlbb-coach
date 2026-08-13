@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Terus cari peluang 1v1 lawan tank/fighter HP besar.' },
     { minute: 19, action: 'Teamfight: fokus tank/frontline musuh dengan combo true damage.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Feint',
+      description:
+        'Setelah menggunakan skill, Yin mendapat peluang menghindari serangan musuh berikutnya untuk waktu singkat.',
+    },
+    {
+      type: 'skill1',
+      name: 'Splitting Strike',
+      description:
+        'Melompat menyerang target, memberi damage sekaligus menandainya untuk combo lanjutan.',
+    },
+    {
+      type: 'skill2',
+      name: 'Ghostly Vajra',
+      description:
+        'Menyerang berputar di sekitar dirinya, memberi damage ke musuh terdekat sambil memberi sedikit perlindungan.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Golden Tathagata Palm',
+      description:
+        'Menghantam target dengan pukulan raksasa yang memberi true damage besar berdasarkan persentase HP maksimal musuh — sangat efektif membunuh tank tebal.',
+    },
+  ],
 };

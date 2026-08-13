@@ -80,7 +80,7 @@ import { hero as ixia } from './ixia';
 import { hero as cici } from './cici';
 import { hero as zetian } from './zetian';
 import { hero as sora } from './sora';
-import { hero as obsidian } from './obsidian';
+import { hero as obsidia } from './obsidia';
 import { hero as kalea } from './kalea';
 import { hero as marcel } from './marcel';
 import { hero as hirara } from './hirara';
@@ -132,7 +132,6 @@ import { hero as julian } from './julian';
 import { hero as suyou } from './suyou';
 import { hero as kaja } from './kaja';
 import { hero as ruby } from './ruby';
-import { hero as keryn } from './keryn';
 
 export const HEROES: Hero[] = [
   tigreal,
@@ -215,7 +214,7 @@ export const HEROES: Hero[] = [
   cici,
   zetian,
   sora,
-  obsidian,
+  obsidia,
   kalea,
   marcel,
   hirara,
@@ -267,7 +266,6 @@ export const HEROES: Hero[] = [
   suyou,
   kaja,
   ruby,
-  keryn,
 ];
 
 const HEROES_BY_SLUG = new Map(HEROES.map((h) => [h.slug, h]));

@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Selalu siap engage duluan saat rotasi grup dengan tim.' },
     { minute: 19, action: 'Teamfight: engage dengan mech, lepas mech untuk damage tambahan setelah lock target.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Overload',
+      description:
+        'Setiap kali Edith memakai skill, dirinya dan Phylax masuk mode overload sementara sehingga basic attack memicu chain lightning tambahan ke musuh sekitar target.',
+    },
+    {
+      type: 'skill1',
+      name: 'Earth Shatter',
+      description:
+        'Phylax melancarkan hantaman ke arah yang dituju setelah jeda singkat, memberi damage fisik ke musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Onward',
+      description:
+        'Phylax menyerbu maju ke arah target, memberi damage ke musuh yang dilewati; jika mengenai hero musuh, Phylax langsung membantingnya untuk damage tambahan.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Primal Wrath',
+      description:
+        'Edith terlontar keluar dari Phylax sambil mendorong mundur musuh sekitar, lalu terbang dan bisa melepaskan basic attack jarak jauh selama mode ini aktif.',
+    },
+  ],
 };

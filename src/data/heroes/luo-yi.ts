@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Grouping dengan tim, siap swap ally yang terjebak keluar bahaya.' },
     { minute: 19, action: 'Teamfight: swap assassin musuh yang dive ke posisi tidak menguntungkan mereka.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Astral Split',
+      description:
+        'Setelah pakai skill, Luo Yi meninggalkan bayangan/jejak sesaat yang bisa memicu efek tambahan saat menyerang lagi.',
+    },
+    {
+      type: 'skill1',
+      name: 'Ink Mastery',
+      description:
+        'Menembakkan serangan magic ke area target, memberi damage ke musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Phantom Rush',
+      description:
+        'Menukar posisi Luo Yi dengan ally atau musuh yang dipilih dalam jangkauan, berguna untuk menyelamatkan ally atau mengacaukan posisi musuh.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Nine Realms',
+      description:
+        'Menandai area luas untuk beberapa saat, lalu memberi damage serentak ke semua musuh yang masih berada di area tersebut saat efek meledak.',
+    },
+  ],
 };

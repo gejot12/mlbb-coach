@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Jadi frontline saat grouping, serap damage physical burst musuh.' },
     { minute: 19, action: 'Teamfight: berdiri di depan carry, gunakan ultimate untuk slow target priority.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Tortoise Blessing',
+      description:
+        'Baxia mendapat shield tambahan saat HP-nya rendah, membuatnya lebih tahan lama saat dikeroyok atau counter-jungle.',
+    },
+    {
+      type: 'skill1',
+      name: "Guardian's Will",
+      description:
+        'Memberi shield ke Baxia dan hero tim di sekitarnya yang menyerap sejumlah damage sebelum habis.',
+    },
+    {
+      type: 'skill2',
+      name: 'Ymir Fist',
+      description:
+        'Baxia dash ke arah target, memberi damage dan sedikit stun ke musuh yang terkena di titik tabrakan.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Totemic Ward',
+      description:
+        'Membuat area totem di sekitar Baxia yang memberi damage dan slow berkelanjutan ke semua musuh yang berada di dalamnya.',
+    },
+  ],
 };

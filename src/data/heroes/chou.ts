@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Gunakan ultimate untuk kick target musuh keluar dari posisi aman (peel/isolate).' },
     { minute: 18, action: 'Teamfight: cari kesempatan kick carry musuh menjauh dari tim sebelum engage utama.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Fists of Fury',
+      description:
+        'Basic attack ketiga Chou secara berturut-turut memberi damage tambahan dan sedikit knock-up ke musuh yang terkena.',
+    },
+    {
+      type: 'skill1',
+      name: 'Jeet Kune Do',
+      description:
+        'Menendang ke arah yang dipilih, mendorong (knock back) musuh pertama yang terkena sekaligus memberi damage.',
+    },
+    {
+      type: 'skill2',
+      name: 'Shunpo',
+      description:
+        'Melesat cepat ke arah tertentu melewati rintangan, memberi mobilitas tinggi untuk mendekat atau kabur dari musuh.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Super Kick',
+      description:
+        'Menendang target musuh yang dipilih dengan sangat keras, mengirimnya terbang jauh ke arah tertentu dan stun singkat saat mendarat.',
+    },
+  ],
 };

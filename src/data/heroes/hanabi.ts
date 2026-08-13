@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 15, action: 'Grouping dengan tim, posisi belakang tapi siap aktifkan ultimate kalau di-CC.' },
     { minute: 20, action: 'Teamfight: aktifkan ultimate CC immunity saat masuk kontak, terus damage lewat pantulan shuriken.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Fixed Attack',
+      description:
+        'Basic attack Hanabi memberi bonus damage tetap tambahan di luar damage normal, membuat trade jangka panjangnya lebih konsisten.',
+    },
+    {
+      type: 'skill1',
+      name: 'Shuriken Coalition',
+      description:
+        'Melempar shuriken yang memantul dari satu musuh ke musuh terdekat lainnya, memberi damage ke banyak target sekaligus.',
+    },
+    {
+      type: 'skill2',
+      name: 'Antitank Grenade',
+      description:
+        'Melempar granat ke area yang dipilih, memberi damage sekaligus mengurangi defense fisik musuh yang terkena.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Blossom Dance',
+      description:
+        'Melepaskan rentetan anak panah ke sekitar dirinya sambil kebal terhadap crowd control selama durasi aktif, cocok untuk bertahan di tengah teamfight.',
+    },
+  ],
 };

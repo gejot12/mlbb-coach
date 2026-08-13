@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Jadi frontline saat grouping, ganggu basic attacker musuh terus-menerus.' },
     { minute: 19, action: 'Teamfight: tempel marksman/fighter utama musuh untuk melumpuhkan damage mereka.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Muddy Rush',
+      description:
+        'Gloo mendapat bonus movement speed saat berada di dekat musuh, membantunya mengejar atau menempel target.',
+    },
+    {
+      type: 'skill1',
+      name: 'Splash Slime',
+      description:
+        'Melemparkan lumpur ke area target, memberi damage dan slow ke musuh yang terkena percikannya.',
+    },
+    {
+      type: 'skill2',
+      name: 'Muddy Body',
+      description:
+        'Menempel pada satu musuh yang dipilih, mengikuti pergerakannya dan menyerap sebagian damage yang diterima musuh tersebut.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Sticky Genes',
+      description:
+        'Menyalin model dan sebagian stat hero musuh yang ditempel, memberi Gloo kemampuan bertarung mirip target sekaligus damage area saat aktif.',
+    },
+  ],
 };

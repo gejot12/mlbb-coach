@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Selalu dekat tim saat rotasi grup, siap revive kalau fight kalah.' },
     { minute: 19, action: 'Teamfight: gunakan ultimate revive setelah tim kalah fight pertama untuk membalikkan keadaan.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Book of Sky-Blue Flame',
+      description:
+        'Faramis mendapat soul dari minion dan hero yang mati di dekatnya; mengumpulkan soul memberinya buff HP dan magic power permanen.',
+    },
+    {
+      type: 'skill1',
+      name: 'Fell Space',
+      description:
+        'Melancarkan gelombang energi ke area yang dipilih, memberi damage ke semua musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Fiendish Fetter',
+      description:
+        'Melemparkan rantai ke area target, memberi damage dan menahan pergerakan musuh yang terkena selama beberapa saat.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Book of Reborn',
+      description:
+        'Menghidupkan kembali semua hero rekan yang tewas dalam waktu belakangan ini di lokasi Faramis berada, mengubah keadaan teamfight secara drastis.',
+    },
+  ],
 };

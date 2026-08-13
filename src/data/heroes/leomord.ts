@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Split push atau bantu rotasi grup tergantung kebutuhan tim.' },
     { minute: 19, action: 'Teamfight: masuk bersama kuda untuk burst combo ke backline musuh.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Soul Reaper',
+      description:
+        'Membunuh musuh memperpanjang durasi kuda hantu Leomord dan memberi bonus stat sementara.',
+    },
+    {
+      type: 'skill1',
+      name: 'Spear of Land',
+      description:
+        'Melempar tombak ke arah target, memberi damage dan efek slow ke musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Horse-Riding Strike',
+      description:
+        'Menaiki atau turun dari kuda hantu sambil menyerang, memberi damage dan sedikit knockback ke musuh di sekitar.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Molten Punishment',
+      description:
+        'Memanggil kuda hantu untuk menyeruduk ke arah tertentu, memberi damage area dan stun ke musuh yang terkena.',
+    },
+  ],
 };

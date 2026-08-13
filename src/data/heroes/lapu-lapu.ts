@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Ikut grouping, cari peluang mode rage penuh sebelum fight.' },
     { minute: 19, action: 'Teamfight: aktifkan mode rage, fokus damage ke marksman/mage musuh.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Sun and Moon Blade',
+      description:
+        'Setiap skill yang dipakai bergantian menggunakan pedang matahari atau bulan, masing-masing memberi efek tambahan berbeda.',
+    },
+    {
+      type: 'skill1',
+      name: 'Sun Sword',
+      description:
+        'Menebas ke depan dengan pedang matahari, memberi damage fisik ke musuh di area jangkauan.',
+    },
+    {
+      type: 'skill2',
+      name: 'Moon Sword',
+      description:
+        'Berputar dengan pedang bulan, memberi damage ke semua musuh di sekitarnya sekaligus.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Ancestor\'s Might',
+      description:
+        'Masuk ke mode marah (rage) yang meningkatkan attack speed dan damage Lapu-Lapu untuk sementara — sangat berbahaya bagi hero squishy.',
+    },
+  ],
 };

@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Snowball dengan terus memburu target priority, hindari inisiasi ke tank duluan.' },
     { minute: 18, action: 'Teamfight: tunggu CC utama musuh terpakai baru dive ke backline.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Font of Rage',
+      description:
+        'Berhasil mengenai musuh dengan skill mempercepat cooldown Sword Dance, memungkinkan Gusion melempar dagger berulang kali dalam combo cepat.',
+    },
+    {
+      type: 'skill1',
+      name: 'Sword Dance',
+      description:
+        'Melesat ke arah target sambil melempar dagger, memberi damage ke musuh yang dilewati.',
+    },
+    {
+      type: 'skill2',
+      name: 'Multiple Sword',
+      description:
+        'Melempar dagger ke beberapa arah sekitar Gusion sekaligus, memberi damage ke semua musuh yang terkena.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Dominance',
+      description:
+        'Melempar dagger portal yang bisa diambil kembali untuk melakukan dash-burst berulang ke target dalam durasi singkat, combo utama eksekusi carry musuh.',
+    },
+  ],
 };

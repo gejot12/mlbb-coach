@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Rotasi grup dengan tim, cari peluang masuk ke formasi musuh yang berkumpul.' },
     { minute: 19, action: 'Teamfight: masuk ke tengah kerumunan musuh, manfaatkan HP steal untuk bertahan lama.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Blood Bank',
+      description:
+        'Alice menyerap darah dari musuh yang terkena skill-nya dan menyimpannya sebagai HP tambahan yang bisa dipakai belakangan.',
+    },
+    {
+      type: 'skill1',
+      name: 'Blood Bond',
+      description:
+        'Menembakkan proyektil garis lurus yang memberi damage magic ke musuh yang terkena sekaligus menyerap sedikit HP.',
+    },
+    {
+      type: 'skill2',
+      name: 'Blood Blossom',
+      description:
+        'Membuat area darah di sekitar Alice yang memberi damage berkelanjutan ke musuh di dalamnya dan menghambat pergerakan mereka.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Blood Rage',
+      description:
+        'Alice menyerbu ke tengah musuh dan menyerap HP dari semua musuh di sekitarnya selama durasi ultimate, membuatnya sangat sulit dibunuh.',
+    },
+  ],
 };

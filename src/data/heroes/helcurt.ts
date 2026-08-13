@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Snowball dengan terus memburu marksman/carry musuh.' },
     { minute: 18, action: 'Teamfight: ultimate ke kerumunan musuh untuk blind massal sebelum fight utama.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Death Sentence',
+      description:
+        'Setelah beberapa saat tidak terlihat musuh atau berhasil membunuh, Helcurt mendapat stealth singkat dan bonus movement speed.',
+    },
+    {
+      type: 'skill1',
+      name: 'Fatal Territory',
+      description:
+        'Melempar bilah ke area yang dipilih, memberi damage dan slow ke semua musuh di dalamnya.',
+    },
+    {
+      type: 'skill2',
+      name: 'Deadly Verdict',
+      description:
+        'Menerjang cepat ke arah target, memberi damage ke musuh pertama yang terkena.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Eternal Night',
+      description:
+        'Membutakan dan membisukan semua musuh di sekitarnya sekaligus mengurangi jarak pandang mereka, sangat efektif melumpuhkan hero yang mengandalkan basic attack atau skill.',
+    },
+  ],
 };

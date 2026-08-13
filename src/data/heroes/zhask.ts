@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Grouping dengan tim, gunakan kepala monster untuk zoning area fight.' },
     { minute: 19, action: 'Teamfight: gunakan ultimate untuk tambahan minion sebagai distraksi/damage.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Nightmaric Spawn',
+      description:
+        'Zhask memanggil Nightmaric Spawn yang mewarisi sebagian atribut miliknya dan otomatis menyerang musuh terdekat dengan damage plus efek slow.',
+    },
+    {
+      type: 'skill1',
+      name: 'Mind Eater',
+      description:
+        'Menembakkan proyektil mental yang menembus ke arah yang dipilih; musuh yang terkena kemudian ikut diserang dan distun oleh Nightmaric Spawn.',
+    },
+    {
+      type: 'skill2',
+      name: 'Hive Clones',
+      description:
+        'Melepaskan gerombolan klon kecil ke arah target yang meledak dan memperlambat musuh saat kontak, atau bersembunyi di tanah untuk menyergap musuh yang lewat.',
+    },
+    {
+      type: 'ultimate',
+      name: "Dominator's Descent",
+      description:
+        'Zhask menyatu dengan Nightmaric Spawn miliknya, membuatnya jauh lebih besar dan kuat sekaligus memperkuat semua skill Zhask, dengan efek blink untuk reposisi atau dive ke backline musuh.',
+    },
+  ],
 };

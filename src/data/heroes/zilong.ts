@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Terus split push sambil tim rotasi objective lain.' },
     { minute: 19, action: 'Teamfight: masuk dari flank untuk memburu backline squishy musuh.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Purity of Freedom',
+      description:
+        'Setiap kali menggunakan skill, Zilong mendapat imunitas singkat terhadap efek slow, membuatnya sulit dikejar atau dikunci.',
+    },
+    {
+      type: 'skill1',
+      name: 'Supreme Wushu',
+      description:
+        'Berputar menyerang dengan tombak ke semua arah, memberi damage ke musuh di sekitarnya sekaligus bagus untuk clear minion.',
+    },
+    {
+      type: 'skill2',
+      name: 'Chaos Refresher',
+      description:
+        'Melesat maju menerjang musuh di jalurnya, memberi damage dan membantu mobilitas untuk mengejar atau kabur.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Dance of Blades',
+      description:
+        'Melancarkan rentetan serangan cepat berturut-turut ke musuh di sekitarnya, memberi damage tinggi sambil menyembuhkan diri dari setiap hit.',
+    },
+  ],
 };

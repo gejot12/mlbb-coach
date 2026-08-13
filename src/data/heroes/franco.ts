@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 12, action: 'Follow carry saat push turret, gunakan hook untuk memisahkan musuh dari grup.' },
     { minute: 18, action: 'Teamfight: buka fight dengan hook ke target prioritas (mage/marksman musuh).' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Fury of the Earthshaker',
+      description:
+        'Franco mendapat bonus physical defense dan sedikit heal setiap kali skill-nya mengenai musuh.',
+    },
+    {
+      type: 'skill1',
+      name: 'Iron Hook',
+      description:
+        'Melemparkan rantai hook lurus ke depan, menarik musuh pertama yang terkena mendekat ke Franco sekaligus memberi damage.',
+    },
+    {
+      type: 'skill2',
+      name: 'Fury Shock',
+      description:
+        'Menghantam tanah di sekitar Franco, memberi damage dan sedikit stun ke musuh yang berada dalam jangkauannya.',
+    },
+    {
+      type: 'ultimate',
+      name: "Netherworld's Punishment",
+      description:
+        'Menghisap seluruh musuh di area sekitar mendekat ke Franco, memberi damage dan crowd control agar tim bisa follow-up combo.',
+    },
+  ],
 };

@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Snowball dengan terus memburu carry musuh yang terisolasi.' },
     { minute: 18, action: 'Teamfight: masuk dari flank, chain-CC target priority sebelum fight utama.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Chain Strike',
+      description:
+        'Mengenai musuh dengan skill berturut-turut memberi bonus damage tambahan pada rangkaian combo tertentu.',
+    },
+    {
+      type: 'skill1',
+      name: 'Binding Strike',
+      description:
+        'Melempar rantai ke arah target, memberi damage dan menahan pergerakan musuh yang terkena sesaat.',
+    },
+    {
+      type: 'skill2',
+      name: 'Swift Chain',
+      description:
+        'Melesat ke arah yang dipilih memakai rantai, memberi damage ke musuh yang dilewati sekaligus reposisi cepat.',
+    },
+    {
+      type: 'ultimate',
+      name: "Assassin's Finale",
+      description:
+        'Mengunci target dengan rangkaian rantai, memberi damage besar berturut-turut dan crowd control tambahan — combo eksekusi utama.',
+    },
+  ],
 };

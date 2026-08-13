@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 15, action: 'Grouping dengan tim, posisi belakang tapi berani semi-agresif.' },
     { minute: 20, action: 'Teamfight: fokus tank/frontline musuh berkat true damage critical.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: "Fighter's Spirit",
+      description:
+        'Setiap critical hit dari Brody memberi true damage tambahan ke target, membuat build critical sangat efektif untuknya.',
+    },
+    {
+      type: 'skill1',
+      name: 'Twin Rooks',
+      description:
+        'Melemparkan tombak ke musuh yang bisa dilempar kembali (boomerang), memberi damage saat pergi maupun saat kembali.',
+    },
+    {
+      type: 'skill2',
+      name: "Devastating Blow",
+      description:
+        'Brody dash ke arah target, memberi damage dan sedikit stun singkat ke musuh yang terkena tabrakan.',
+    },
+    {
+      type: 'ultimate',
+      name: "Punishment of Fate",
+      description:
+        'Melancarkan tombak besar dari langit ke target yang dipilih, memberi damage besar ke area sekitar titik pendaratan.',
+    },
+  ],
 };

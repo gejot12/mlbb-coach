@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 15, action: 'Grouping dengan tim, kiting terus musuh melee yang mendekat.' },
     { minute: 20, action: 'Teamfight: jaga jarak dan terus kiting, fokus damage ke target terdekat yang aman.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Frenzy',
+      description:
+        'Setiap beberapa kali basic attack, Irithel melepaskan tembakan tambahan yang memberi bonus damage.',
+    },
+    {
+      type: 'skill1',
+      name: 'Spider Move',
+      description:
+        'Melompat mundur menjauh dari musuh sambil menembakkan anak panah ke musuh terdekat selama melayang di udara.',
+    },
+    {
+      type: 'skill2',
+      name: 'Explosive Trap',
+      description:
+        'Melempar jebakan ke area yang dipilih, memberi damage dan slow ke musuh yang menyentuhnya.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Ballista',
+      description:
+        'Menembakkan busur panah besar garis lurus yang menembus musuh, memberi damage besar ke semua yang terkena.',
+    },
+  ],
 };

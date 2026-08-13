@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 15, action: 'Grouping dengan tim, manfaatkan ultimate untuk kabur dari dive.' },
     { minute: 20, action: 'Teamfight: fokus damage ke tank/frontline musuh yang biasanya susah ditembus marksman lain.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Circuit Break',
+      description:
+        'Basic attack Claude memicu pendamping (Dexter) untuk ikut menyerang target yang sama, menggandakan sebagian damage yang dikeluarkan.',
+    },
+    {
+      type: 'skill1',
+      name: 'Battle Mirror Image',
+      description:
+        'Menembakkan proyektil ke area yang dipilih, memberi damage ke musuh sekaligus menukar posisi Claude dengan pendampingnya.',
+    },
+    {
+      type: 'skill2',
+      name: 'Art of Windtalker',
+      description:
+        'Memberi buff attack speed pada Claude dan pendampingnya untuk sementara waktu, mempercepat farm dan damage output.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Down With A Blast',
+      description:
+        'Menembakkan proyektil jarak jauh yang memberi damage besar sekaligus efek slow ke musuh yang terkena, membantu kabur dari dive.',
+    },
+  ],
 };

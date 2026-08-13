@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Split push atau rotasi grup, jadi ancaman konstan di map.' },
     { minute: 19, action: 'Teamfight: all-in agresif ke carry musuh, manfaatkan revive untuk fight kedua.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Evil Awakens',
+      description:
+        'Skill Argus saling mengurangi cooldown satu sama lain saat dipakai, membuat rotasi combo-nya jadi lebih sering dan agresif.',
+    },
+    {
+      type: 'skill1',
+      name: 'Rising Fury',
+      description:
+        'Argus menyerang ke depan dengan pedang bersayap, memberi damage fisik ke musuh dalam area garis pendek.',
+    },
+    {
+      type: 'skill2',
+      name: 'Wing Slash',
+      description:
+        'Melompat ke arah musuh dan menyerang area sekitar pendaratan, memberi damage sekaligus mendekatkan Argus ke target.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Judgement of Light',
+      description:
+        'Argus mengubah bentuk menjadi lebih kuat dan langsung menyerang musuh sekitar; jika mati dalam waktu singkat setelahnya ia bisa bangkit kembali dengan sebagian HP.',
+    },
+  ],
 };

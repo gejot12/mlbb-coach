@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Snowball dengan terus memburu mage/marksman musuh.' },
     { minute: 18, action: 'Teamfight: masuk dari flank, kombinasikan kedua gaya untuk burst maksimal.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Transient Immortal',
+      description:
+        'Cast singkat (tap) membuat Suyou masuk gaya Mortal yang lebih cepat menyerang, sedangkan cast tahan (hold) membuat ia masuk gaya Immortal yang lebih tanky dan memukul lebih keras.',
+    },
+    {
+      type: 'skill1',
+      name: 'Blade Surge',
+      description:
+        'Tap: melempar senjata lalu berkelebat ke lokasinya sambil menebas balik. Hold: menerjang lurus ke arah target dengan jarak yang bertambah sesuai lama tahan.',
+    },
+    {
+      type: 'skill2',
+      name: 'Soul Sever',
+      description:
+        'Tap: sabetan kipas ke area depan yang efektif menghabisi musuh HP rendah. Hold: rentetan tiga tebasan yang memulihkan HP Suyou di pukulan terakhir.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Evil Queller',
+      description:
+        'Suyou meluncur mundur sambil menebas ke arah target, memberi damage dan efek slow; unik karena bisa dipelajari sejak level 1 dan naik level lebih fleksibel.',
+    },
+  ],
 };

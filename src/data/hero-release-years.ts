@@ -103,7 +103,7 @@ export const HERO_RELEASE_YEAR: Record<string, number> = {
   cici: 2023,
   zetian: 2024,
   sora: 2024,
-  obsidian: 2024,
+  obsidia: 2024,
   kalea: 2025,
   marcel: 2026,
   hirara: 2026,
@@ -140,7 +140,6 @@ export const HERO_RELEASE_YEAR: Record<string, number> = {
   suyou: 2023,
   kaja: 2018,
   ruby: 2017,
-  keryn: 2025,
 };
 
 export function getHeroReleaseYear(slug: string): number {

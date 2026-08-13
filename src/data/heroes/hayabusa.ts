@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Split push sendiri, kembali cepat ke fight lewat mobility shadow.' },
     { minute: 18, action: 'Teamfight: masuk dari sisi yang tidak terlihat, fokus backline musuh.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Shadow Strike',
+      description:
+        'Serangan berturut-turut ke target yang sama memberi bonus damage tambahan pada hit tertentu dalam rangkaian combo.',
+    },
+    {
+      type: 'skill1',
+      name: 'Shuriken Fan',
+      description:
+        'Melempar beberapa shuriken menyebar ke depan, memberi damage ke semua musuh yang terkena dan menandai mereka.',
+    },
+    {
+      type: 'skill2',
+      name: 'Phantom Shuriken',
+      description:
+        'Melesat cepat ke arah yang dipilih sambil melempar shuriken, memberi damage dan reposisi instan.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Ninjutsu: Quadraslash',
+      description:
+        'Memanggil bayangan yang menyerang serentak semua musuh yang sudah ditandai di sekitarnya, memberi damage besar ke banyak target sekaligus.',
+    },
+  ],
 };

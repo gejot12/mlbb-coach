@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Grouping dengan tim, tetap di posisi paling belakang.' },
     { minute: 19, action: 'Teamfight: ultimate laser ke formasi musuh yang sejajar.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Nonstop Vitality',
+      description:
+        'Cyclops secara perlahan meregenerasi mana seiring waktu, membuatnya jarang kehabisan mana untuk terus poke.',
+    },
+    {
+      type: 'skill1',
+      name: 'Ability Steal',
+      description:
+        'Menembakkan proyektil ke target yang dipilih, memberi damage sekaligus menyalin sebentar salah satu skill musuh untuk dipakai Cyclops.',
+    },
+    {
+      type: 'skill2',
+      name: 'Robot Eye',
+      description:
+        'Memanggil mata robot yang melayang ke area target, meledak setelah delay dan memberi damage ke musuh di sekitarnya.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Laser Beam',
+      description:
+        'Menembakkan laser lurus yang panjang menembus semua musuh yang sejajar di jalurnya, memberi damage besar berkelanjutan.',
+    },
+  ],
 };

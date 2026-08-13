@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Selalu dekat carry utama, waspada carry musuh yang bisa di-grab.' },
     { minute: 19, action: 'Teamfight: grab carry musuh paling berbahaya, tarik jauh dari perlindungan tim mereka.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Deliverance',
+      description:
+        'Kaja menandai musuh dengan persentase HP terendah di sekitarnya, memberi damage tambahan periodik ke target yang ditandai.',
+    },
+    {
+      type: 'skill1',
+      name: 'Judgment Blade',
+      description:
+        'Melempar pedang lurus ke depan, memberi damage dan stun singkat ke musuh pertama yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Trial',
+      description:
+        'Kaja melesat ke area yang dipilih sambil mendapat shield sesaat, berguna untuk mendekati atau menghindari damage.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Divine Judgment',
+      description:
+        'Menarik satu hero musuh dari jarak jauh langsung ke dekat Kaja, menembus banyak efek imun crowd control, lalu memberi damage besar.',
+    },
+  ],
 };

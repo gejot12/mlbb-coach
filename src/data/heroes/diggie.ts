@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Dekat carry utama tim, waspada combo CC musuh yang mengincar carry.' },
     { minute: 18, action: 'Teamfight: aktifkan ultimate purify tepat sebelum/saat musuh melancarkan combo CC utama.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Antique Cuirass',
+      description:
+        'Diggie mendapat resistensi crowd control sehingga durasi CC yang mengenainya berkurang secara otomatis.',
+    },
+    {
+      type: 'skill1',
+      name: 'Diggie Bomb',
+      description:
+        'Melempar bom kecil ke area target, memberi damage dan slow ke musuh yang terkena ledakannya.',
+    },
+    {
+      type: 'skill2',
+      name: 'Time Journey',
+      description:
+        'Mengubah diri jadi telur untuk sementara, memberi tambahan gerak dan resistensi damage sebelum kembali ke wujud normal.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Time Bomb',
+      description:
+        'Menghilangkan seluruh efek crowd control pada tim di area sekitar sekaligus memberi speed boost singkat kepada mereka.',
+    },
+  ],
 };

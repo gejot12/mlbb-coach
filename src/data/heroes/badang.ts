@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Ikut grouping, gunakan grip untuk menarik target priority.' },
     { minute: 19, action: 'Teamfight: grip carry musuh mendekat, atau ultimate untuk dorong musuh menjauh dari objective.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Iron Fist',
+      description:
+        'Serangan dasar Badang ke musuh yang sama berulang kali memberi stack yang meningkatkan damage, mendorong trade jarak dekat terus-menerus.',
+    },
+    {
+      type: 'skill1',
+      name: 'Flying Fist',
+      description:
+        'Melemparkan tinju yang menarik musuh pertama yang terkena mendekat ke arah Badang, memaksa mereka masuk jarak dekat.',
+    },
+    {
+      type: 'skill2',
+      name: 'Beast Within',
+      description:
+        'Badang meningkatkan attack speed dan movement speed sementara, mempermudah trade cepat atau mengejar musuh.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Rock Fist',
+      description:
+        'Menghantam tanah dengan pukulan besar, memberi damage tinggi dan mendorong menjauh (knock-back) semua musuh di sekitar area hantaman.',
+    },
+  ],
 };

@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Split push atau bantu rotasi grup tergantung kebutuhan tim.' },
     { minute: 19, action: 'Teamfight: ultimate pukulan ke target HP tebal, stack tinggi bikin damage tetap relevan.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Rising Momentum',
+      description:
+        'Setiap kill atau assist menambah stack permanen yang meningkatkan damage basic attack Aldous secara bertahap sepanjang game.',
+    },
+    {
+      type: 'skill1',
+      name: 'Aldous Style',
+      description:
+        'Menyerang musuh di depan dengan rangkaian pukulan, memberi damage fisik ke target di area kecil di sekitar Aldous.',
+    },
+    {
+      type: 'skill2',
+      name: 'Odin Style',
+      description:
+        'Meningkatkan attack speed dan movement speed Aldous untuk sementara, mempermudah mengejar atau kabur dari musuh.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Chaos Style',
+      description:
+        'Melesat ke target dengan pukulan besar yang damage-nya scaling dari jumlah stack yang terkumpul — semakin banyak stack, semakin mematikan.',
+    },
+  ],
 };

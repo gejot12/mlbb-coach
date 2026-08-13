@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 15, action: 'Grouping dengan tim, posisi belakang tapi berani semi-agresif.' },
     { minute: 20, action: 'Teamfight: fokus tank/frontline musuh berkat damage tambahan cahaya.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Photon Radiance',
+      description:
+        'Basic attack dan skill Natan memberi damage tambahan berbasis cahaya yang lebih besar terhadap musuh ber-HP maksimal tinggi seperti tank.',
+    },
+    {
+      type: 'skill1',
+      name: 'Flash of the Blade',
+      description:
+        'Natan melesat cepat ke arah yang dipilih, memberi damage ke musuh yang dilewati sekaligus reposisi jarak dekat-jauh.',
+    },
+    {
+      type: 'skill2',
+      name: 'Twin Strike',
+      description:
+        'Melancarkan serangan cahaya beruntun ke area di sekitar target, memberi damage ke musuh yang terkena.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Beam of Antimatter',
+      description:
+        'Menembakkan sinar cahaya jarak jauh berbentuk garis yang memberi damage besar, dengan bonus damage tambahan ke musuh berdefense/HP tinggi.',
+    },
+  ],
 };

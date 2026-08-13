@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Split push atau bantu rotasi grup tergantung kebutuhan tim.' },
     { minute: 19, action: 'Teamfight: masuk dari flank, rangkaian combo ke target priority.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: "Hero's Resolve",
+      description:
+        'Lukas mengumpulkan Resolve secara bertahap dan mendapat tambahan saat mengenai hero musuh; Resolve yang penuh dibutuhkan untuk mengaktifkan mode Sacred Beast lewat ultimate-nya.',
+    },
+    {
+      type: 'skill1',
+      name: 'Flash Combo',
+      description:
+        'Lukas melesat ke arah musuh dengan tonfa-nya; efeknya makin kuat sesuai stack Vigor yang terkumpul, mulai dari dash biasa hingga stun dan rentetan pukulan.',
+    },
+    {
+      type: 'skill2',
+      name: 'Pulverize',
+      description:
+        'Menghabiskan seluruh Vigor untuk melepaskan pukulan besar yang memberi damage fisik, sekaligus memulihkan sebagian HP Lukas jika mengenai hero atau minion.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Unleash the Beast',
+      description:
+        'Lukas berubah menjadi mode Sacred Beast dengan movement speed dan seluruh atribut yang meningkat, membuat skill-skillnya mendapat efek tambahan selama transformasi berlangsung.',
+    },
+  ],
 };

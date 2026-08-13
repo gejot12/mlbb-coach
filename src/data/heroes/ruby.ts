@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Ikut grouping, isolasi carry musuh dengan hook sebelum fight utama.' },
     { minute: 19, action: 'Teamfight: hook carry musuh menjauh dari timnya, manfaatkan sustain untuk bertahan lama.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Regeneration',
+      description:
+        'Semua skill Ruby memberi efek spell vamp, memulihkan sebagian HP-nya berdasarkan damage yang diberikan ke musuh.',
+    },
+    {
+      type: 'skill1',
+      name: 'Judgment of Destruction',
+      description:
+        'Ruby melompat dan menghantam area di depan dengan sabit, memberi damage ke semua musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Scarlet Rain',
+      description:
+        'Melempar sabit ke target yang dipilih untuk menghook dan menarik musuh tersebut mendekat ke arah Ruby.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Fragrant Roses',
+      description:
+        'Ruby berputar sambil menyerang semua musuh di sekitarnya secara berulang, memberi damage terus-menerus selama durasi ultimate aktif.',
+    },
+  ],
 };

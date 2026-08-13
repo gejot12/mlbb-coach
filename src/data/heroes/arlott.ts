@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Split push atau ikut rotasi grup tergantung kebutuhan tim.' },
     { minute: 19, action: 'Teamfight: masuk dari flank, juggling target priority selama mungkin.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: "Duelist's Charm",
+      description:
+        'Serangan Arlott ke target yang sama berulang kali memberi bonus damage tambahan, mendorong fokus terus-menerus ke satu musuh.',
+    },
+    {
+      type: 'skill1',
+      name: 'Whirlwind Blade',
+      description:
+        'Menyerang berputar ke musuh di sekitarnya, memberi damage area sambil sedikit menarik musuh terdekat mendekat.',
+    },
+    {
+      type: 'skill2',
+      name: "Duelist's Dance",
+      description:
+        'Arlott dash ke arah target dan bisa dipakai berulang untuk menjuggling musuh ke udara, mengunci mereka dalam combo.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Gale Slash',
+      description:
+        'Melancarkan tebasan angin besar ke arah target, memberi damage tinggi dan efek knock-back ke musuh yang terkena.',
+    },
+  ],
 };

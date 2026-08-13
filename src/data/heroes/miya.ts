@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 15, action: 'Grouping dengan tim, gunakan ultimate untuk invis saat reposisi.' },
     { minute: 20, action: 'Teamfight: fokus damage stabil dari posisi aman, manfaatkan invis untuk kabur dari fokus musuh.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Turbo',
+      description:
+        'Setiap basic attack menambah stack attack speed sementara, membuat Miya semakin cepat menyerang selama terus basic attack.',
+    },
+    {
+      type: 'skill1',
+      name: 'Rain of Arrows',
+      description:
+        'Menembakkan hujan anak panah ke area yang dipilih, memberi damage ke semua musuh di dalam radius tersebut.',
+    },
+    {
+      type: 'skill2',
+      name: 'Hidden Blade',
+      description:
+        'Menembakkan beberapa anak panah tajam ke arah garis lurus yang bisa menembus dan mengenai banyak musuh sekaligus.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Hawkeye Vision',
+      description:
+        'Meningkatkan jarak serang dan attack speed secara signifikan, basic attack menembakkan panah tambahan, serta memberi invisibility singkat saat tidak bergerak.',
+    },
+  ],
 };

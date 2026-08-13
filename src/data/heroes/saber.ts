@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Snowball dengan terus memburu target priority, hindari fight tanpa kill jelas.' },
     { minute: 18, action: 'Teamfight: kunci carry musuh paling berbahaya duluan sebelum fight utama dimulai.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Combo Mastery',
+      description:
+        'Setiap tiga basic attack berturut-turut, serangan ketiga Saber memberi damage tambahan yang cukup besar ke musuh.',
+    },
+    {
+      type: 'skill1',
+      name: 'Triple Slash',
+      description:
+        'Melesat menembus ke arah yang dipilih sambil menebas semua musuh yang dilewati, memberi damage.',
+    },
+    {
+      type: 'skill2',
+      name: 'Shadow Assault',
+      description:
+        'Melancarkan tebasan cepat ke depan, memberi damage ke musuh dalam jangkauan pendek di depan Saber.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Killing Blade',
+      description:
+        'Mengunci satu target musuh dan menyerangnya beruntun dengan rentetan tebasan cepat, memberi damage besar sambil kebal dari sebagian efek kontrol selama durasi combo.',
+    },
+  ],
 };

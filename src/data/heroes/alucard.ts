@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 12, action: 'Split push atau cari pick-off 1v1 ke hero squishy yang terisolasi.' },
     { minute: 17, action: 'Teamfight: masuk lewat flank, fokus target rentan sambil manfaatkan sustain.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Pain Embrace',
+      description:
+        'Alucard mendapat spell vamp berlebih yang dikonversi menjadi shield, membuatnya tahan lama saat trading terus-menerus.',
+    },
+    {
+      type: 'skill1',
+      name: 'Groundslicer',
+      description:
+        'Melemparkan pedang berputar ke depan yang bolak-balik, memberi damage ke musuh yang terkena dalam garis lurus.',
+    },
+    {
+      type: 'skill2',
+      name: 'Whirling Smash',
+      description:
+        'Alucard melompat ke target dan berputar menyerang musuh di sekitarnya, memberi damage area sambil mendekat cepat.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Fission Wave',
+      description:
+        'Menembakkan gelombang energi garis lurus yang memberi damage besar, lalu Alucard langsung dash ke titik akhir gelombang tersebut.',
+    },
+  ],
 };

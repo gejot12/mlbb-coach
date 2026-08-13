@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Selalu siap engage duluan saat rotasi grup dengan tim.' },
     { minute: 19, action: 'Teamfight: area-freeze formasi musuh sebelum tim sendiri masuk penuh.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Platinum Snap',
+      description:
+        'Secara berkala memberi true damage ke musuh di sekitar sekaligus memberi shield untuk rekan tim terdekat, berguna untuk peran support-nya.',
+    },
+    {
+      type: 'skill1',
+      name: 'Framed Moment',
+      description:
+        'Membuat area jebakan yang meledak setelah jeda singkat, memberi damage dan mengunci pergerakan musuh yang terkena di dalamnya.',
+    },
+    {
+      type: 'skill2',
+      name: 'Tracking Shot',
+      description:
+        'Memberi tambahan kecepatan gerak yang makin besar saat mendekati musuh; digunakan lagi untuk dash cepat sambil meninggalkan bayangan di posisi awal.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Golden Hour',
+      description:
+        'Membekukan sebuah area selama beberapa detik; musuh yang terjebak di dalamnya masuk kondisi Stasis dan hanya bisa menerima damage dari Marcel (area-freeze).',
+    },
+  ],
 };

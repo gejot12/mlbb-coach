@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Selalu dekat carry saat rotasi grup, siap engage duluan.' },
     { minute: 19, action: 'Teamfight: ultimate ke tengah kerumunan musuh untuk slow-stun massal.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Rock Guard',
+      description:
+        'Hylos memancarkan aura di sekitarnya yang mengurangi lifesteal musuh terdekat, sangat kuat melawan hero sustain tinggi.',
+    },
+    {
+      type: 'skill1',
+      name: 'Rock Formation',
+      description:
+        'Memunculkan duri batu garis lurus dari tanah, memberi damage dan slow ke musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Magma Fist',
+      description:
+        'Menghantam tanah di area sekitar, memberi damage ke semua musuh terdekat sekaligus memperkuat pertahanannya sesaat.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Shockwave',
+      description:
+        'Melepaskan gelombang kejut besar di area luas sekitarnya, memberi damage dan memperlambat sekaligus men-stun musuh yang terkena.',
+    },
+  ],
 };

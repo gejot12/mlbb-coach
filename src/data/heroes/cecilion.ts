@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Grouping dengan tim, selalu di posisi paling belakang dan terlindungi.' },
     { minute: 19, action: 'Teamfight: nuke dari jarak jauh, andalkan tim untuk menahan dive assassin musuh.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Devourer of the Sea',
+      description:
+        'Cecilion mendapat stack magic power permanen setiap kali skill mengenai musuh, membuatnya makin kuat seiring game berjalan.',
+    },
+    {
+      type: 'skill1',
+      name: 'Astral Bats',
+      description:
+        'Menembakkan gerombolan kelelawar lurus ke depan yang memberi damage ke semua musuh yang terkena di jalurnya.',
+    },
+    {
+      type: 'skill2',
+      name: 'Winged Reaper',
+      description:
+        'Melayangkan sayap di area sekitar, memberi damage berulang ke musuh yang berada di dalamnya selama durasi aktif.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Endless Nightmare',
+      description:
+        'Melepaskan ledakan magic damage besar ke area luas di sekitar Cecilion, damage-nya meningkat sesuai jumlah stack passive yang terkumpul.',
+    },
+  ],
 };

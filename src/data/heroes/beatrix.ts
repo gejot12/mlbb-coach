@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 15, action: 'Grouping dengan tim, posisi belakang tapi siap ganti senjata cepat kalau di-dive.' },
     { minute: 20, action: 'Teamfight: gunakan mode senjata anti-tank kalau lawan formasi tebal.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Weapon Master',
+      description:
+        'Beatrix bisa membawa dan menukar dua senjata sekaligus di tengah pertarungan, masing-masing punya karakteristik damage dan jangkauan berbeda.',
+    },
+    {
+      type: 'skill1',
+      name: 'Gluttony Wheel',
+      description:
+        'Menembakkan proyektil dari senjata yang sedang aktif ke arah musuh, memberi damage sesuai jenis senjata yang dipakai.',
+    },
+    {
+      type: 'skill2',
+      name: 'Ignition Charge',
+      description:
+        'Beatrix melempar bom yang meledak di area target, memberi damage ke semua musuh yang terkena ledakan.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Nibiru Missile',
+      description:
+        'Meluncurkan rudal ke area yang dipilih dari jarak jauh, memberi damage besar ke musuh di area ledakan — efektif untuk zoning atau finishing.',
+    },
+  ],
 };

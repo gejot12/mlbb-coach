@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Grouping dengan tim, sebar pod di jalur masuk musuh.' },
     { minute: 19, action: 'Teamfight: gunakan kombinasi pod untuk kontrol area sebelum fight utama.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Astral Chain',
+      description:
+        'Astral Sphere yang dipanggil Novaria terus memperlambat musuh di sekitarnya, memberi damage berbasis persentase HP maksimal saat meledak, dan memberi vision terhadap musuh yang terkena.',
+    },
+    {
+      type: 'skill1',
+      name: 'Astral Sphere',
+      description:
+        'Memanggil astral sphere ke lokasi target yang meledak setelah jeda singkat, memberi damage area sekaligus memperkuat efek slow di sekitarnya.',
+    },
+    {
+      type: 'skill2',
+      name: 'Astral Recall',
+      description:
+        'Memanggil astral sphere dari kejauhan lalu menariknya ke arah Novaria, memberi bonus movement speed dan kemampuan menembus terrain selama pergerakan.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Astral Echo',
+      description:
+        'Melepaskan proyektil astral besar yang melesat melintasi map, memberi vision terhadap musuh yang terkena sekaligus damage besar saat mengenai target.',
+    },
+  ],
 };

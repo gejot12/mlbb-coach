@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Jadi frontline utama saat grouping, tahan damage sebanyak mungkin.' },
     { minute: 19, action: 'Teamfight: berdiri di depan formasi, serap damage untuk carry di belakang.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Overload',
+      description:
+        'Uranus meregenerasi HP secara pasif dari waktu ke waktu; regenerasi ini bisa disimpan menjadi shield lewat skill lain.',
+    },
+    {
+      type: 'skill1',
+      name: 'Nuclear Reaction',
+      description:
+        'Melepaskan gelombang energi di area sekitarnya, memberi damage ke semua musuh terdekat sekaligus mengubah sisa regenerasi HP jadi shield.',
+    },
+    {
+      type: 'skill2',
+      name: 'Nano Saber',
+      description:
+        'Melompat menyerang target dengan cakar energi, memberi damage dan menarik musuh sedikit mendekat.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Nova Buster',
+      description:
+        'Melepaskan ledakan energi besar di sekitar dirinya, memberi damage area luas sambil mengembalikan sebagian HP yang hilang.',
+    },
+  ],
 };

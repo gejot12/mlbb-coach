@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Split push atau cari 1v1 lawan hero HP tebal.' },
     { minute: 19, action: 'Teamfight: fokus tank/frontline musuh, biarkan tim lain handle backline.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Undying',
+      description:
+        'Masha meregenerasi HP secara pasif saat di luar combat dan mendapat bonus movement speed saat bergerak bebas.',
+    },
+    {
+      type: 'skill1',
+      name: 'Rolling Attack',
+      description:
+        'Menggulingkan diri ke depan menabrak musuh, memberi damage yang scaling dengan persentase HP maksimal target — efektif lawan tank.',
+    },
+    {
+      type: 'skill2',
+      name: 'Totem',
+      description:
+        'Menancapkan totem di tanah yang memberi buff untuk Masha selama dia berada di dekatnya.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Wild Punch',
+      description:
+        'Melepaskan rentetan pukulan cepat ke semua musuh di sekitarnya, memberi damage berbasis persentase HP maksimal mereka.',
+    },
+  ],
 };

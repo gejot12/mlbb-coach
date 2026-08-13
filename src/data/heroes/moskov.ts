@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 15, action: 'Grouping dengan tim, war poke dari jarak jauh sebelum kontes langsung.' },
     { minute: 20, action: 'Teamfight: poke formasi musuh yang sejajar dengan tombak tembus.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Abyssal Wave',
+      description:
+        'Basic attack Moskov menembus dan mengenai semua musuh yang berada segaris di belakang target utama.',
+    },
+    {
+      type: 'skill1',
+      name: 'Spear of Misery',
+      description:
+        'Melempar tombak ke arah garis lurus yang memberi damage sekaligus mengurangi pertahanan fisik musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Rushing Thunder',
+      description:
+        'Meningkatkan movement speed dan attack speed Moskov untuk sementara waktu, membantu kiting maupun mengejar musuh.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Abyssal Spear',
+      description:
+        'Melontarkan tombak raksasa ke jarak sangat jauh (bisa lintas map di level maksimal) yang menembus dan memberi damage besar ke semua musuh segaris.',
+    },
+  ],
 };

@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Split push atau bantu rotasi grup tergantung kebutuhan tim.' },
     { minute: 19, action: 'Teamfight: gunakan clone untuk mengecoh fokus musuh sambil damage dari posisi aman.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'I Have Not Yet Begun to Fight',
+      description:
+        'Saat HP Yi Sun-shin di bawah ambang tertentu, basic attack-nya menembakkan panah tambahan secara otomatis.',
+    },
+    {
+      type: 'skill1',
+      name: "Todok's Command",
+      description:
+        'Memanggil hujan anak panah dari kapal ke area target, memberi damage berulang ke semua musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Turtle Ship',
+      description:
+        'Melompat ke area yang dipilih sambil meninggalkan decoy kapal kura-kura yang menyerang musuh di sekitarnya.',
+    },
+    {
+      type: 'ultimate',
+      name: "Emperor's Sword",
+      description:
+        'Melemparkan pedang raksasa yang meluncur lurus lalu berbelok kembali, memberi damage besar pada musuh yang dilewati.',
+    },
+  ],
 };

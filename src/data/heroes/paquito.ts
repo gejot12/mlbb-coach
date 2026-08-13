@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Ikut grouping, cari peluang combo penuh ke target priority.' },
     { minute: 19, action: 'Teamfight: masuk saat musuh melee sedang menyerang untuk maksimalkan counter-punch.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Counterpunch',
+      description:
+        'Bertahan dari serangan musuh menambah stack counterpunch; saat memukul balik, Paquito memberi damage tambahan berdasarkan jumlah stack.',
+    },
+    {
+      type: 'skill1',
+      name: 'Heavy Punch',
+      description:
+        'Melesat ke arah musuh dan melayangkan pukulan, memberi damage sekaligus sedikit dorongan ke musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Uppercut',
+      description:
+        'Melayangkan pukulan ke atas yang membuat musuh di depan terlempar ke udara (airborne), membuka peluang combo lanjutan.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Total Knockout',
+      description:
+        'Melancarkan rentetan pukulan combo ke target yang dipilih, memberi damage besar berturut-turut dan bonus true damage eksekusi ke musuh ber-HP rendah.',
+    },
+  ],
 };

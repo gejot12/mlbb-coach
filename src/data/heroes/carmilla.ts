@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Selalu dekat carry utama, siap freeze musuh yang mendekat.' },
     { minute: 19, action: 'Teamfight: freeze carry/assassin musuh yang paling berbahaya sebelum fight utama.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: "Ally's Nightmare / Enemy's Dream",
+      description:
+        'Carmilla menyerap sebagian damage yang mengarah ke hero tim terdekat, membantu peel dari burst musuh.',
+    },
+    {
+      type: 'skill1',
+      name: 'Blood Vow',
+      description:
+        'Menandai musuh yang terkena sehingga damage yang diterimanya bertambah untuk sementara waktu.',
+    },
+    {
+      type: 'skill2',
+      name: 'Frenzy Fangs',
+      description:
+        'Melemparkan efek freeze ke area target, menahan pergerakan musuh yang terkena di dalamnya.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Bat Barrage',
+      description:
+        'Carmilla mengirim gerombolan kelelawar ke area luas, memberi damage berkelanjutan ke semua musuh yang berada di dalamnya.',
+    },
+  ],
 };

@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Split push atau bantu rotasi grup tergantung kebutuhan tim.' },
     { minute: 19, action: 'Teamfight: masuk dengan sulur untuk mobilitas, manfaatkan heal untuk bertahan lama.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Vine',
+      description:
+        'Hilda meregenerasi HP secara bertahap saat tidak dalam pertarungan, regenerasi ini lebih cepat ketika berada di dalam semak.',
+    },
+    {
+      type: 'skill1',
+      name: 'Vine',
+      description:
+        'Melempar sulur ke arah yang dipilih, memberi damage sekaligus menarik dirinya mendekat atau menarik musuh ke arahnya.',
+    },
+    {
+      type: 'skill2',
+      name: 'Vigorous Palm',
+      description:
+        'Melompat dan menghantam tanah di area target, memberi damage dan stun ke musuh yang terkena.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Vengeful Fighting Spirit',
+      description:
+        'Mengaktifkan mode bertarung yang meningkatkan attack speed dan memberi lifesteal tambahan selama durasi aktif — bagus untuk menang trade berkepanjangan.',
+    },
+  ],
 };

@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Simpan ultimate untuk dive langsung ke carry musuh saat teamfight dimulai.' },
     { minute: 19, action: 'Teamfight: buka fight dengan dive ultimate ke backline, manfaatkan sustain untuk bertahan di sana.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Blood Debt Ritual',
+      description:
+        'Yu Zhong menyembuhkan sebagian HP setiap kali skill-nya mengenai musuh, memberi sustain tinggi dalam pertarungan berkepanjangan.',
+    },
+    {
+      type: 'skill1',
+      name: 'Blood Devouring Blade',
+      description:
+        'Menyabetkan cakar naga ke area di sekitarnya, memberi damage ke semua musuh terdekat sekaligus menyembuhkan diri sendiri.',
+    },
+    {
+      type: 'skill2',
+      name: 'Blood Dragon Claw',
+      description:
+        'Melesat maju menerjang target, memberi damage dan sedikit crowd control pada musuh yang tertabrak.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Dragon Wrath',
+      description:
+        'Berubah menjadi bentuk naga dan menerjang jarak jauh ke target, memberi damage besar area saat mendarat — ideal untuk dive ke backline musuh.',
+    },
+  ],
 };

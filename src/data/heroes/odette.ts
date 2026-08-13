@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Grouping dengan tim, cari posisi aman untuk baca pergerakan musuh.' },
     { minute: 19, action: 'Teamfight: timing ultimate saat musuh benar-benar berkumpul untuk burst maksimal.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: "Enchantress's Bathing",
+      description:
+        'Sebagian mana yang dimiliki Odette dikonversi menjadi bonus magic power tambahan, membuatnya makin kuat seiring mana pool bertambah.',
+    },
+    {
+      type: 'skill1',
+      name: 'Ripples',
+      description:
+        'Melepaskan gelombang riak di sekitar Odette, memberi damage dan sedikit slow ke musuh dalam radius tertentu.',
+    },
+    {
+      type: 'skill2',
+      name: 'Fabled Swan',
+      description:
+        'Melesat ke arah yang dipilih sambil menandai area dengan bulu angsa yang akan meledak setelah delay, memberi damage ke musuh di dalamnya.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Swan Song',
+      description:
+        'Menciptakan lingkaran cahaya raksasa yang menyusut dan memberi damage besar berulang ke semua musuh yang terjebak di dalamnya.',
+    },
+  ],
 };

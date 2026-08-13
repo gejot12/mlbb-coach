@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 15, action: 'Grouping dengan tim, cari sudut aman untuk snipe backline musuh.' },
     { minute: 20, action: 'Teamfight: stealth dan cari posisi snipe, fokus target HP rendah dari jarak jauh.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Master Sniper',
+      description:
+        'Critical hit Lesley memberi bonus true damage tambahan, membuat burst-nya makin mematikan saat crit.',
+    },
+    {
+      type: 'skill1',
+      name: 'Master Prone',
+      description:
+        'Melompat mundur menjauhi arah yang dipilih sambil tetap menembak, berguna untuk kiting sambil menjaga jarak aman.',
+    },
+    {
+      type: 'skill2',
+      name: 'Downpour',
+      description:
+        'Menembakkan beberapa peluru sekaligus ke area cone di depan Lesley, memberi damage ke banyak musuh sekaligus.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Ambush',
+      description:
+        'Lesley masuk mode stealth sesaat; tembakan pertama setelah keluar dari stealth memberi damage kritikal besar ke target.',
+    },
+  ],
 };

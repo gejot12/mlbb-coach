@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Grouping dengan tim, tetap di belakang formasi.' },
     { minute: 19, action: 'Teamfight: fokus tank/frontline musuh yang biasanya sulit ditembus mage lain.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Crimson Butterflies',
+      description:
+        'Setiap kali Zhuxin channel Lantern Flare, mana yang terpakai dikonversi menjadi kupu-kupu crimson yang mengikuti Spirit Lantern-nya, dan menghilang secara bertahap sambil mengembalikan sebagian mana saat channel berhenti.',
+    },
+    {
+      type: 'skill1',
+      name: 'Fluttering Grace',
+      description:
+        'Memberi damage ke semua musuh di area berbentuk kipas di depan Zhuxin, menerapkan stack Soul Snare, memperlambat musuh yang terkena, dan memberi Zhuxin sendiri bonus movement speed sesaat.',
+    },
+    {
+      type: 'skill2',
+      name: 'Lantern Flare',
+      description:
+        'Ditahan untuk menggerakkan Spirit Lantern yang terus memberi damage dan menumpuk Soul Snare ke musuh di sekitarnya; saat dilepas, semua musuh yang tertangkap dilempar ke lokasi target dan terkena damage besar berbasis HP maksimal mereka.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Crimson Beacon',
+      description:
+        'Zhuxin berpindah ke lokasi target dan memasuki mode terbang dengan shield pelindung, memberi damage berkelanjutan ke musuh di sekitarnya sambil terus menumpuk Soul Snare.',
+    },
+  ],
 };

@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Jadi frontline saat grouping, serap basic attack musuh sebanyak mungkin.' },
     { minute: 19, action: 'Teamfight: masuk lebih dulu, ultimate saat shield sudah penuh terisi untuk burst maksimal.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Astral Attunement',
+      description:
+        'Sebagian damage yang diserap shield Esmeralda diubah menjadi energi ultimate, mempercepat cooldown ultimate-nya.',
+    },
+    {
+      type: 'skill1',
+      name: 'Fissure of Astral',
+      description:
+        'Menghantamkan bulan sabit ke area yang dipilih, memberi damage ke semua musuh yang terkena di area tersebut.',
+    },
+    {
+      type: 'skill2',
+      name: 'Astral Shield',
+      description:
+        'Melapisi diri dengan shield yang menyerap damage berbasis persentase HP maksimal, membantu bertahan dari basic attack musuh.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Astral Blessing',
+      description:
+        'Melepaskan ledakan energi besar ke area sekitar, damage-nya meningkat sesuai jumlah shield yang berhasil diserap sebelumnya.',
+    },
+  ],
 };

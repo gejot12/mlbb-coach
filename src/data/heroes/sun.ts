@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Terus tekan map dengan clone sambil tim rotasi objective lain.' },
     { minute: 19, action: 'Teamfight: gabung fight utama sambil clone tetap push turret di lane lain.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Instinct',
+      description:
+        'Saat HP Sun berada di bawah ambang tertentu, ia mendapat peluang menghindari basic attack musuh sepenuhnya.',
+    },
+    {
+      type: 'skill1',
+      name: 'Rising Cudgel',
+      description:
+        'Melompat ke area target dan menghantamkan tongkat ke tanah, memberi damage ke musuh di sekitar titik jatuh.',
+    },
+    {
+      type: 'skill2',
+      name: 'Cudgel Field',
+      description:
+        'Memutar tongkat membentuk pusaran di sekitarnya, menyedot musuh mendekat sambil memberi damage berulang.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Clone Formation',
+      description:
+        'Menciptakan beberapa clone yang menyebar dan menyerang musuh secara independen, sangat efektif untuk split push atau mengecoh fokus musuh.',
+    },
+  ],
 };

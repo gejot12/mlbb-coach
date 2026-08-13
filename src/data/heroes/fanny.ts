@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Split push sendiri atau tunggu peluang pick-off backline saat grouping.' },
     { minute: 18, action: 'Teamfight: masuk dari flank saat CC utama musuh (hook/stun) sudah terpakai.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Blade of Heaven',
+      description:
+        'Basic attack Fanny setelah menggunakan cable memberi bonus true damage tambahan ke target yang terkena.',
+    },
+    {
+      type: 'skill1',
+      name: 'Steel Cable',
+      description:
+        'Melontarkan cable ke dinding atau objek sekitar, menarik Fanny terbang cepat ke arah tersebut untuk mobilitas tinggi.',
+    },
+    {
+      type: 'skill2',
+      name: 'Iron Wire',
+      description:
+        'Melontarkan cable ke arah musuh yang dipilih, menariknya mendekat sekaligus memberi damage dan sedikit stun.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Cut Throat',
+      description:
+        'Melancarkan tebasan cepat berturut-turut ke musuh di depan Fanny, memberi damage besar sebagai finisher combo cable.',
+    },
+  ],
 };

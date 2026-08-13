@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Selalu siap engage duluan saat grouping dengan tim.' },
     { minute: 19, action: 'Teamfight: ultimate ke tengah kerumunan musuh untuk stun sekaligus heal tim sendiri.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Rage',
+      description:
+        'Minotaur mengisi gauge amarah setiap kali menerima atau memberi damage; saat penuh ia masuk mode Enraged dengan bonus lifesteal dan damage.',
+    },
+    {
+      type: 'skill1',
+      name: 'Fury Smash',
+      description:
+        'Menghantam tanah di depan dengan palu, memberi damage dan sedikit knock back ke musuh dalam area kerucut.',
+    },
+    {
+      type: 'skill2',
+      name: 'Bloodthirsty Roar',
+      description:
+        'Mengaum di sekitar diri sendiri, memulihkan HP dirinya dan hero ally terdekat yang ikut terkena efek.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Berserker Rage',
+      description:
+        'Menghentak area luas di sekitar Minotaur, men-stun dan memberi damage ke semua musuh; jika sedang dalam mode Enraged, tim ikut mendapat heal besar.',
+    },
+  ],
 };

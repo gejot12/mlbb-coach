@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 15, action: 'Grouping dengan tim, posisi belakang tapi berani semi-agresif.' },
     { minute: 20, action: 'Teamfight: fokus tank/frontline musuh berkat true damage tambahan dari passive.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Firmiana Simplex',
+      description:
+        'Setiap beberapa basic attack, Bruno melepaskan bola sepak tambahan yang memberi true damage ke target yang diserang.',
+    },
+    {
+      type: 'skill1',
+      name: 'Fatal Strike',
+      description:
+        'Menendang bola sepak garis lurus ke musuh, memberi damage fisik ke semua yang terkena dalam lintasan.',
+    },
+    {
+      type: 'skill2',
+      name: 'Flying Tackle',
+      description:
+        'Bruno meningkatkan attack speed sementara dan mendapat tambahan jangkauan serang, mempermudah trade jarak jauh.',
+    },
+    {
+      type: 'ultimate',
+      name: "Puskas' Kick",
+      description:
+        'Menendang bola sepak besar ke arah musuh, memberi damage tinggi dan sedikit stun ke target dan musuh di sekitarnya.',
+    },
+  ],
 };

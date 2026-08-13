@@ -31,4 +31,12 @@ describe("hero data integrity", () => {
       }
     }
   });
+
+  it.each(HEROES)("$name: has exactly 4 skills in passive/skill1/skill2/ultimate order", (hero) => {
+    expect(hero.skills.map((s) => s.type)).toEqual(['passive', 'skill1', 'skill2', 'ultimate']);
+    for (const skill of hero.skills) {
+      expect(skill.name.length, `${hero.slug} ${skill.type} has an empty name`).toBeGreaterThan(0);
+      expect(skill.description.length, `${hero.slug} ${skill.type} has an empty description`).toBeGreaterThan(0);
+    }
+  });
 });

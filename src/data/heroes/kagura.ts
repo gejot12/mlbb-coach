@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Posisi di belakang saat grouping, poke terus sebelum teamfight besar.' },
     { minute: 18, action: 'Teamfight: gunakan ultimate untuk zoning/burst carry musuh dari jarak aman.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Seimei Umbrella',
+      description:
+        'Payung Kagura adalah senjata sekaligus posisi kunci; melemparnya jauh membuatnya rentan sampai payung diambil kembali atau ditarik.',
+    },
+    {
+      type: 'skill1',
+      name: 'Ame no Mizu',
+      description:
+        'Melempar payung garis lurus ke depan, memberi damage ke musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Yin Yang',
+      description:
+        'Melempar payung sekali lagi atau berteleportasi ke posisi payung yang sudah dilempar, memberi damage tambahan ke musuh di sekitarnya.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Rain of Blossom',
+      description:
+        'Menjatuhkan payung dari udara ke area target berulang kali, memberi damage terus-menerus ke semua musuh di dalam area tersebut.',
+    },
+  ],
 };

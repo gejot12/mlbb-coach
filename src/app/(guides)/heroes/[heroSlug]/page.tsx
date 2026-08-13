@@ -3,9 +3,17 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { HEROES, getHero } from "@/data/heroes";
 import { getItem } from "@/data/items";
+import type { SkillType } from "@/lib/types/hero";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { HeroAvatar } from "@/components/ui/hero-avatar";
+
+const SKILL_TYPE_LABELS: Record<SkillType, string> = {
+  passive: "Passive",
+  skill1: "Skill 1",
+  skill2: "Skill 2",
+  ultimate: "Ultimate",
+};
 
 export function generateStaticParams() {
   return HEROES.map((hero) => ({ heroSlug: hero.slug }));
@@ -83,6 +91,28 @@ export default async function HeroDetailPage({
         ))}
       </div>
       <p className="mt-4 text-foreground/70">{hero.summary}</p>
+
+      <div className="mt-8">
+        <div className="flex items-baseline justify-between gap-2">
+          <h2 className="text-xl font-semibold">Skill Kit</h2>
+          <p className="text-xs text-foreground/40">
+            Rangkuman efek utama, bukan angka presisi per patch — cek in-game untuk cooldown/damage tepat.
+          </p>
+        </div>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          {hero.skills.map((skill) => (
+            <Card key={skill.type}>
+              <div className="flex items-center gap-2">
+                <Badge tone={skill.type === "ultimate" ? "accent" : "neutral"}>
+                  {SKILL_TYPE_LABELS[skill.type]}
+                </Badge>
+                <h3 className="font-medium">{skill.name}</h3>
+              </div>
+              <p className="mt-2 text-sm text-foreground/70">{skill.description}</p>
+            </Card>
+          ))}
+        </div>
+      </div>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2">
         <Card>

@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Ikut grouping, incar hero shield musuh untuk maksimalkan passive.' },
     { minute: 19, action: 'Teamfight: fokus hero shield/sustain musuh yang biasanya sulit ditembus fighter lain.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: "Decimator's Blade",
+      description:
+        'Serangan Dyrroth mengabaikan sebagian shield musuh dan memberi bonus true damage tambahan terhadap target yang terlindungi shield.',
+    },
+    {
+      type: 'skill1',
+      name: 'Fissure of Torment',
+      description:
+        'Menghantamkan tombak ke arah depan dalam garis lurus, memberi damage ke semua musuh yang terkena.',
+    },
+    {
+      type: 'skill2',
+      name: 'Immortal Rage',
+      description:
+        'Melompat menabrak target ke arah tertentu, memberi damage dan efek stun singkat pada musuh yang terkena.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Death Sonata',
+      description:
+        'Melancarkan serangkaian tebasan tombak berturut-turut ke area sekitar, memberi damage besar dan bonus lifesteal sesuai jumlah musuh yang terkena.',
+    },
+  ],
 };

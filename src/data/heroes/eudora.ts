@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 14, action: 'Grouping dengan tim, tetap di belakang formasi.' },
     { minute: 19, action: 'Teamfight: stun target priority duluan sebelum combo burst penuh.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Force of Fatal',
+      description:
+        'Skill Eudora yang mengenai musuh memberi stack; saat mencapai batas, musuh terkena efek tambahan berupa slow singkat.',
+    },
+    {
+      type: 'skill1',
+      name: 'Forbidden Thunder',
+      description:
+        'Melepaskan gelombang petir ke area sekitar Eudora, memberi damage ke semua musuh di sekelilingnya.',
+    },
+    {
+      type: 'skill2',
+      name: 'Occult Bolts',
+      description:
+        'Melemparkan bola energi ke target tunggal yang dipilih, memberi damage dari jarak jauh dengan cooldown singkat.',
+    },
+    {
+      type: 'ultimate',
+      name: "Poli's Sting",
+      description:
+        'Menembakkan bola petir target-lock yang menyetrum musuh dengan stun instan sekaligus damage besar.',
+    },
+  ],
 };

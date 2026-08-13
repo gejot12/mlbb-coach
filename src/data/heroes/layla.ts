@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 15, action: 'Grouping dengan tim, selalu posisi paling belakang saat teamfight.' },
     { minute: 20, action: 'Teamfight: fokus damage target terdekat yang aman dijangkau, kabur duluan kalau di-dive.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Malefic Bomb',
+      description:
+        'Setiap beberapa basic attack, Layla menembakkan peluru bonus yang memberi damage tambahan ke target.',
+    },
+    {
+      type: 'skill1',
+      name: 'Void Projectile',
+      description:
+        'Menembakkan proyektil garis lurus yang menembus dan memberi damage ke semua musuh yang dilewati.',
+    },
+    {
+      type: 'skill2',
+      name: 'Cruel Style',
+      description:
+        'Meningkatkan damage basic attack Layla untuk beberapa saat, membuat trading jadi lebih menyakitkan.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Destruction Rush',
+      description:
+        'Menembakkan tembakan sangat kuat lurus ke depan, memberi damage besar ke musuh pertama yang terkena dari jarak sangat jauh.',
+    },
+  ],
 };

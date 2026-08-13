@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Split push atau bantu rotasi tergantung siapa yang paling mudah di-snowball.' },
     { minute: 18, action: 'Teamfight: masuk dari sisi tak terduga lewat dash dimensi ke backline musuh.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Dimensional Journey',
+      description:
+        'Setelah menggunakan skill, basic attack berikutnya memberi damage tambahan dan sedikit heal ke Nolan.',
+    },
+    {
+      type: 'skill1',
+      name: 'Dimension Blade',
+      description:
+        'Melesat cepat menembus dimensi ke arah yang dipilih, memberi damage ke musuh yang dilewati.',
+    },
+    {
+      type: 'skill2',
+      name: 'Vanish',
+      description:
+        'Nolan menghilang sesaat ke dimensi lain, sulit dilacak musuh dan bisa mengatur ulang posisi combo berikutnya.',
+    },
+    {
+      type: 'ultimate',
+      name: 'Dimensional Storm',
+      description:
+        'Melancarkan rentetan dash-serangan cepat berpindah dimensi ke target yang dipilih, memberi damage besar berturut-turut sebagai combo eksekusi utama.',
+    },
+  ],
 };

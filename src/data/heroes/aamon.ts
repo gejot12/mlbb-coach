@@ -25,4 +25,30 @@ export const hero: Hero = {
     { minute: 13, action: 'Snowball dengan terus memburu mage/marksman musuh.' },
     { minute: 18, action: 'Teamfight: masuk dari sisi tak terduga lewat teleport, burst combo cepat lalu kabur.' },
   ],
+  skills: [
+    {
+      type: 'passive',
+      name: 'Assassinate',
+      description:
+        'Setelah beberapa saat tidak terkena damage, Aamon masuk mode stealth dan basic attack berikutnya jadi critical strike bonus damage.',
+    },
+    {
+      type: 'skill1',
+      name: 'Shadow Grasp',
+      description:
+        'Melempar bayangan ke area yang dipilih, meledak setelah delay singkat dan memberi damage ke semua musuh di area tersebut.',
+    },
+    {
+      type: 'skill2',
+      name: 'Shadow Escape',
+      description:
+        'Menyebar beberapa shadow clone di sekitar; Aamon bisa teleport instan ke salah satu clone untuk reposisi cepat saat combo atau kabur.',
+    },
+    {
+      type: 'ultimate',
+      name: "Assassin's Fury",
+      description:
+        'Melancarkan rentetan serangan cepat ke target yang dipilih dari jarak jauh lewat teleport clone, memberi damage besar berturut-turut — combo utama untuk eksekusi target squishy.',
+    },
+  ],
 };
