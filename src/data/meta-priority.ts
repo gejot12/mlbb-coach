@@ -1,22 +1,13 @@
 /**
- * Prioritas pick/ban di scene kompetitif — snapshot manual per Agustus 2026, bersumber dari
- * analisis draft MSC 2026 (Esports World Cup, Paris) oleh GameMarket.gg. Ini level "tren meta
- * pro scene" (siapa yang sering di-ban/prioritas pick dan kenapa), BUKAN log ban/pick per
- * pertandingan otomatis dan TIDAK auto-update mengikuti turnamen yang sedang berjalan — itu
- * baru bisa didapat kalau akses LiquipediaDB API sudah disetujui (lihat
- * src/lib/liquipedia/client.ts), yang mana jadi sumber utama untuk data ini ke depannya.
- * Re-kurasi manual berkala dari sumber Liquipedia/mobilelegends.com selagi API belum aktif.
- * Beberapa hero yang disebut sumber (Hirara, Barats, Marcel, Arlott, Lapu-Lapu, Julian,
- * Hanabi) belum ada di roster situs ini, jadi tidak dimasukkan di sini — tambahkan saat
- * hero-hero itu ditambahkan ke data/heroes/.
- *
- * STALE per patch 2.2.16 (16 Sep 2026, lihat patch_notes di Supabase): daftar ini disusun
- * sebelum patch itu turun, jadi belum mencerminkan balance terbaru. Yang sudah pasti berubah
- * (dari patch note resmi, bukan tebakan meta pro-scene): Melissa kena nerf attack speed +
- * damage Muddles (lihat entri di bawah), sementara Argus/Aulus/Kalea/Karina/Cici/Alpha/Kagura
- * naik daun lewat buff — belum dimasukkan ke daftar premier/high karena itu butuh data
- * pick/ban turnamen aktual, bukan sekadar "baru dibuff". Re-kurasi penuh masih menunggu akses
- * LiquipediaDB API atau analisis draft pro-scene terbaru.
+ * Prioritas pick/ban di scene kompetitif — snapshot per 29 September 2026, bersumber dari
+ * tier list Season 42 / patch 2.2.16 (16 Sep 2026), cross-checked dari 2 sumber independen:
+ * mlbbhub.com/tier-list dan agregasi hasil pencarian (esports.gg, bo3.gg, timesaver.gg, dll).
+ * Hero dengan tier 'premier' muncul S-tier atau top-ban-priority di 2+ sumber; 'high' berarti
+ * S/A-tier di minimal 1 sumber yang jelas. Ini level "tren meta" (siapa yang kuat/sering
+ * dihindari dan kenapa), BUKAN log ban/pick per pertandingan otomatis — itu baru bisa didapat
+ * kalau akses LiquipediaDB API sudah disetujui (lihat src/lib/liquipedia/client.ts), yang jadi
+ * sumber utama ke depannya. Re-kurasi manual berkala selagi API belum aktif — TIDAK auto-update
+ * mengikuti tiap patch, jadi cek ulang setelah ada patch balance besar berikutnya.
  */
 export interface MetaPriorityEntry {
   slug: string;
@@ -25,24 +16,22 @@ export interface MetaPriorityEntry {
 }
 
 export const COMPETITIVE_META_PRIORITY: MetaPriorityEntry[] = [
-  { slug: 'chou', tier: 'premier', note: 'Premier pick-or-ban status berkat kemampuan pick-off yang tak tertandingi.' },
-  { slug: 'gloo', tier: 'premier', note: 'Nyaris perma-ban karena sulit dibunuh dan kontrol vision tinggi.' },
-  { slug: 'nolan', tier: 'high', note: 'Jungler tempo & snowball utama, kuat kontrol objective.' },
-  { slug: 'fanny', tier: 'high', note: 'Pick mobilitas tinggi berbasis skill wall-mechanic.' },
-  { slug: 'ling', tier: 'high', note: 'Assassin wall-walk yang bisa membalik momentum lewat pick-off bersih.' },
-  { slug: 'esmeralda', tier: 'high', note: 'Duelist self-sustain yang mendominasi side-lane sendirian.' },
-  { slug: 'zhuxin', tier: 'high', note: 'Zone-control & CC engine yang mendikte teamfight.' },
-  { slug: 'eudora', tier: 'high', note: 'Eksekutor early-game untuk gank 3-man ke side lane.' },
-  { slug: 'valentina', tier: 'high', note: 'Ultimate-stealer yang memaksa draft lawan lebih hati-hati.' },
-  {
-    slug: 'melissa',
-    tier: 'high',
-    note: 'Carry anti-dive dengan mekanik protektif lawan assassin — tapi kena nerf attack speed & damage Muddles di patch 2.2.16 (16 Sep 2026), jadi power-nya sekarang di bawah puncak MSC 2026.',
-  },
-  { slug: 'karrie', tier: 'high', note: 'Spesialis anti-tank lewat true damage yang menembus armor.' },
-  { slug: 'atlas', tier: 'high', note: 'Anchor engagement roam untuk buka teamfight.' },
-  { slug: 'estes', tier: 'high', note: 'Anchor sustain roam untuk trade panjang.' },
-  { slug: 'floryn', tier: 'high', note: 'Anchor sustain roam berbasis heal carry.' },
+  { slug: 'masha', tier: 'premier', note: 'S-tier di role tank maupun fighter pasca-rework 2.2.16 — 3 HP bar bikin dia unggul sustained fight, susah dihentikan tanpa burst besar.' },
+  { slug: 'aulus', tier: 'premier', note: 'S-tier fighter exp lane, win rate ~58% di Season 42 berkat buff ramp-up dan HP regen patch 2.2.16.' },
+  { slug: 'argus', tier: 'premier', note: 'S-tier fighter — buff Demonic Slash trigger + stun baru di Skill 2 bikin dia jauh lebih agresif dari sebelumnya.' },
+  { slug: 'minotaur', tier: 'premier', note: 'S-tier tank/support, tetap jadi salah satu anchor roam terkuat musim ini.' },
+  { slug: 'gloo', tier: 'premier', note: 'Nyaris perma-ban — masuk top-5 hero yang paling worth diban di ranked Season 42.' },
+  { slug: 'rafaela', tier: 'premier', note: 'S-tier support, win rate ~59% — sustain roam paling dominan musim ini.' },
+  { slug: 'floryn', tier: 'premier', note: 'S-tier support berbasis heal carry, konsisten di top pick support Season 42.' },
+  { slug: 'hirara', tier: 'premier', note: 'Ban rate ~65% — assassin paling draft-warping musim ini meski pick rate-nya sendiri sedang.' },
+  { slug: 'obsidia', tier: 'high', note: 'Satu-satunya marksman S-tier musim ini, damage Bone Shard-nya efektif tembus formasi tank.' },
+  { slug: 'khufra', tier: 'high', note: 'S-tier tank di sebagian sumber — tetap jadi pilihan kuat buat lock target/counter mobilitas.' },
+  { slug: 'marcel', tier: 'high', note: 'S-tier support di sebagian sumber, kuat mengunci teamfight lewat area-freeze.' },
+  { slug: 'belerick', tier: 'high', note: 'A-tier tank sekaligus salah satu hero paling worth diban — sustain-nya bikin lane dominance susah direbut.' },
+  { slug: 'eudora', tier: 'high', note: 'A-tier mage sekaligus top-ban-priority — eksekutor early-game yang masih ditakuti draft lawan.' },
+  { slug: 'paquito', tier: 'high', note: 'A-tier fighter meski kena nerf burst early-mid di patch 2.2.16 — tetap worth diban karena snowball potential-nya.' },
+  { slug: 'bruno', tier: 'high', note: 'Baru naik ke A-tier pasca-rework 2.2.16 — sekarang bisa buka fight dari jarak jauh lewat Worldie, bukan cuma finisher.' },
+  { slug: 'ling', tier: 'high', note: 'A-tier assassin, wall-walk-nya tetap relevan buat pick-off dan reposisi cepat.' },
 ];
 
 const META_PRIORITY_BY_SLUG = new Map(COMPETITIVE_META_PRIORITY.map((e) => [e.slug, e]));
