@@ -7,7 +7,7 @@ export const hero: Hero = {
   lanes: ['gold'],
   difficulty: 'medium',
   summary:
-    'Marksman dengan bola sepak yang memberi true damage tambahan tiap beberapa serangan. Sangat kuat lawan tank berkat damage tambahan yang stabil.',
+    'Direvamp di patch 2.2.16 (Season 42, 16 Sep 2026): identitas powerball-kicking marksman-nya dipertahankan, tapi kontrol dan mekanik skill dioptimalkan — sekarang bisa punya 2 powerball sekaligus dan ultimate-nya jadi hook jarak jauh, bukan bounce penutup fight.',
   strongAgainst: ['grock'],
   weakAgainst: ['karina'],
   synergizesWith: ['nana'],
@@ -15,40 +15,40 @@ export const hero: Hero = {
     {
       label: 'Core Anti-Tank',
       itemSlugs: ['rapid-boots', 'berserkers-fury', 'malefic-roar', 'wind-of-nature', 'blade-of-despair'],
-      note: 'Attack speed tinggi memaksimalkan frekuensi true damage dari passive bola sepak.',
+      note: 'Attack speed tinggi tetap penting untuk stack crit chance dari passive Mecha Legs dan memaksimalkan basic attack powerball.',
     },
   ],
   rotation: [
-    { minute: 0, action: 'Farm gold lane, bangun attack speed untuk memicu passive lebih sering.' },
+    { minute: 0, action: 'Farm gold lane, jaga dua powerball tetap aktif (dari Skill 1 dan Skill 2) untuk damage maksimal.' },
     { minute: 5, action: 'Push turret gold lane setelah item pertama selesai.' },
     { minute: 10, action: 'Ikut rotasi objective setelah dua item core selesai.' },
-    { minute: 15, action: 'Grouping dengan tim, posisi belakang tapi berani semi-agresif.' },
-    { minute: 20, action: 'Teamfight: fokus tank/frontline musuh berkat true damage tambahan dari passive.' },
+    { minute: 15, action: 'Grouping dengan tim — sekarang bisa buka fight dari jarak jauh lewat hook Worldie, bukan cuma finisher.' },
+    { minute: 20, action: 'Teamfight: pakai Worldie untuk hook carry/roamer musuh ke jangkauan tim, lanjut basic attack powerball ganda.' },
   ],
   skills: [
     {
       type: 'passive',
-      name: 'Firmiana Simplex',
+      name: 'Mecha Legs',
       description:
-        'Setiap beberapa basic attack, Bruno melepaskan bola sepak tambahan yang memberi true damage ke target yang diserang.',
+        'Tiap skill yang kena musuh menambah stack critical chance (sekitar 2-2.5% per stack, maksimal 8 stack ≈ 20% tambahan), tapi Bruno hanya dapat sebagian bonus attack speed dari item yang dibeli.',
     },
     {
       type: 'skill1',
-      name: 'Fatal Strike',
+      name: 'Volley Shot',
       description:
-        'Menendang bola sepak garis lurus ke musuh, memberi damage fisik ke semua yang terkena dalam lintasan.',
+        'Menendang powerball ke depan yang bisa diambil lagi; sekarang menghasilkan powerball sendiri (tidak menarik powerball terdekat), jadi Bruno bisa punya 2 powerball aktif sekaligus. Mengambil tiap powerball memangkas cooldown Skill 2 satu detik.',
     },
     {
       type: 'skill2',
-      name: 'Flying Tackle',
+      name: 'Slide',
       description:
-        'Bruno meningkatkan attack speed sementara dan mendapat tambahan jangkauan serang, mempermudah trade jarak jauh.',
+        'Dash sesuai arah joystick yang otomatis menghasilkan powerball baru begitu dash selesai — sekarang murni alat reposisi/reload powerball, bukan skill damage/stun lagi.',
     },
     {
       type: 'ultimate',
-      name: "Puskas' Kick",
+      name: 'Worldie',
       description:
-        'Menendang bola sepak besar ke arah musuh, memberi damage tinggi dan sedikit stun ke target dan musuh di sekitarnya.',
+        'Menembakkan powerball besar jarak jauh yang men-stun hero musuh pertama yang terkena dan menyeretnya ke tepi jangkauan serang Bruno — sekarang alat inisiasi dari jauh, bukan bounce penutup fight seperti versi lama.',
     },
   ],
 };

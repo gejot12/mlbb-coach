@@ -34,7 +34,7 @@ async function getMatches(leagueSlug?: string): Promise<MatchWithLeague[]> {
   let query = supabase
     .from("matches")
     .select("*, leagues!inner(*)")
-    .order("scheduled_at", { ascending: true });
+    .order("scheduled_at", { ascending: false });
 
   if (leagueSlug && leagueSlug !== "all") {
     query = query.eq("leagues.slug", leagueSlug);
