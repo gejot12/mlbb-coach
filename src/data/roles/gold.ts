@@ -36,6 +36,7 @@ export const roleGuide: RoleGuide = {
       details: [
         'Mulai grouping penuh dengan tim, posisikan diri di belakang formasi.',
         'Fokus damage konsisten, hindari menjadi orang pertama yang terlihat musuh saat fight dimulai.',
+        'Patch 2.2.16: basic attack priority berubah dari "Lowest HP" jadi "Lowest Effective HP" (mempertimbangkan defense/penetrasi musuh) — item defense sekarang benar-benar mengurangi peluang jadi target basic attack musuh, bukan cuma nambah HP effective saja.',
       ],
     },
     {

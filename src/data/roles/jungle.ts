@@ -12,6 +12,7 @@ export const roleGuide: RoleGuide = {
       details: [
         'Mulai dari buff/camp yang paling aman sesuai hero (top atau bottom jungle).',
         'Beri tahu tim posisi buff musuh yang terlihat untuk kontes/invade jika memungkinkan.',
+        'Patch 2.2.16: base gold jungle camp dipangkas 13%, jadi farming jungle murni sekarang kurang worth it dibanding dulu — prioritaskan gank/kontes objective lebih awal daripada full-clear tiap rotasi.',
       ],
     },
     {
@@ -28,6 +29,8 @@ export const roleGuide: RoleGuide = {
       details: [
         'Turtle pertama biasanya spawn sekitar menit ke-2, tapi fokus rebutan mulai terasa di fase ini setelah level cukup.',
         'Bawa minimal 2 hero untuk menang kontes turtle, jangan solo lawan tim musuh full.',
+        'Patch 2.2.16: buff turtle sekarang Healing Turtle (heal, bukan shield lagi) — lebih berharga buat tim yang baru selesai trade/fight daripada buat buka fight baru.',
+        'Map juga dapat Golden Turret (turret tertentu kasih bonus gold tim kalau dijatuhkan) — jadikan target rotasi tambahan selain turtle/lord.',
       ],
     },
     {

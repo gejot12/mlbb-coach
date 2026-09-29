@@ -35,6 +35,7 @@ export const roleGuide: RoleGuide = {
       focus: 'Grouping',
       details: [
         'Grouping dengan tim, posisikan diri sesuai kebutuhan: mage di belakang, assassin siap flank.',
+        'Patch 2.2.16: targeting priority basic attack berubah ke "Lowest Effective HP" (mempertimbangkan defense) — item magic/physical defense sekarang lebih efektif menghindari fokus musuh, relevan juga buat itemisasi hybrid.',
       ],
     },
     {

@@ -20,6 +20,7 @@ export const roleGuide: RoleGuide = {
       details: [
         'Setelah gold lane cukup aman, mulai roam bantu exp/mid untuk kill tambahan.',
         'Update vision map secara rutin, terutama river dan jungle musuh.',
+        'Patch 2.2.16: map dapat fitur Revealing Wisps untuk kontrol vision tambahan — manfaatkan buat intip pergerakan jungler musuh sebelum invade/gank.',
       ],
     },
     {
@@ -28,6 +29,7 @@ export const roleGuide: RoleGuide = {
       details: [
         'Jadi orang pertama yang mengunci vision di sekitar turtle sebelum tim datang kontes.',
         'Siapkan engage/peel tergantung kebutuhan tim saat itu.',
+        'Ikut jaga vision di Golden Turret (fitur baru patch 2.2.16) — turret ini kasih bonus gold tim, jadi sama pentingnya dengan turtle buat dikontes.',
       ],
     },
     {

@@ -28,6 +28,7 @@ export const roleGuide: RoleGuide = {
       details: [
         'Hero split push kuat bisa terus tekan exp lane sendirian sambil tim rotasi objective lain.',
         'Hero tank sebaiknya mulai gabung tim untuk kontrol turtle/lord.',
+        'Patch 2.2.16: kalau exp lane ada Golden Turret (fitur baru, kasih bonus gold tim), prioritaskan jatuhkan itu duluan sebelum lanjut split push jauh.',
       ],
     },
     {
