@@ -9,6 +9,14 @@
  * Beberapa hero yang disebut sumber (Hirara, Barats, Marcel, Arlott, Lapu-Lapu, Julian,
  * Hanabi) belum ada di roster situs ini, jadi tidak dimasukkan di sini — tambahkan saat
  * hero-hero itu ditambahkan ke data/heroes/.
+ *
+ * STALE per patch 2.2.16 (16 Sep 2026, lihat patch_notes di Supabase): daftar ini disusun
+ * sebelum patch itu turun, jadi belum mencerminkan balance terbaru. Yang sudah pasti berubah
+ * (dari patch note resmi, bukan tebakan meta pro-scene): Melissa kena nerf attack speed +
+ * damage Muddles (lihat entri di bawah), sementara Argus/Aulus/Kalea/Karina/Cici/Alpha/Kagura
+ * naik daun lewat buff — belum dimasukkan ke daftar premier/high karena itu butuh data
+ * pick/ban turnamen aktual, bukan sekadar "baru dibuff". Re-kurasi penuh masih menunggu akses
+ * LiquipediaDB API atau analisis draft pro-scene terbaru.
  */
 export interface MetaPriorityEntry {
   slug: string;
@@ -26,7 +34,11 @@ export const COMPETITIVE_META_PRIORITY: MetaPriorityEntry[] = [
   { slug: 'zhuxin', tier: 'high', note: 'Zone-control & CC engine yang mendikte teamfight.' },
   { slug: 'eudora', tier: 'high', note: 'Eksekutor early-game untuk gank 3-man ke side lane.' },
   { slug: 'valentina', tier: 'high', note: 'Ultimate-stealer yang memaksa draft lawan lebih hati-hati.' },
-  { slug: 'melissa', tier: 'high', note: 'Carry anti-dive S-Tier dengan mekanik protektif lawan assassin.' },
+  {
+    slug: 'melissa',
+    tier: 'high',
+    note: 'Carry anti-dive dengan mekanik protektif lawan assassin — tapi kena nerf attack speed & damage Muddles di patch 2.2.16 (16 Sep 2026), jadi power-nya sekarang di bawah puncak MSC 2026.',
+  },
   { slug: 'karrie', tier: 'high', note: 'Spesialis anti-tank lewat true damage yang menembus armor.' },
   { slug: 'atlas', tier: 'high', note: 'Anchor engagement roam untuk buka teamfight.' },
   { slug: 'estes', tier: 'high', note: 'Anchor sustain roam untuk trade panjang.' },
